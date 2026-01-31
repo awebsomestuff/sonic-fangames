@@ -34,4 +34,19 @@ Next, you can download Sonic Revert for free on all your devices.
 Sonic Revert redefines how you control Sonic, giving him car-like controls when he’s in running mode. This innovative gameplay mechanic makes racing through levels a thrilling experience, combining the speed and agility of Sonic with the precision of car controls. The game offers both single-player time attack and online multiplayer racing modes, allowing you to test your skills against up to 100 players simultaneously.
 
 Classic Sonic mechanics have been given a new twist, with modifications to abilities like the homing attack. The level design draws inspiration from Trackmania tracks but incorporates traditional Sonic elements such as badniks, spikes, and other hazards, ensuring that each race is as challenging as it is exhilarating.`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://html-classic.itch.zone/html/3962593/index.html" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

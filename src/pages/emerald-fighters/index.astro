@@ -50,4 +50,19 @@ The demo of Emerald Fighters features a roster of beloved characters, each with 
  	<li>Knuckles the Echidna: Excels in strength and close-quarters combat.</li>
  	<li>Additional Characters: Explore the potential for more characters to be added as development progresses.</li>
 </ul>`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://html-classic.itch.zone/html/10410928/EmeraldSonic2DWebGL1.5/index.html" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

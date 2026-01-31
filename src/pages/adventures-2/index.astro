@@ -107,4 +107,19 @@ Playing directly in the browser also means that updates and patches are automati
 <strong>New Sonic 2 Adventure offers a fresh and thrilling experience</strong> for fans of the classic Sonic the Hedgehog series. With intuitive controls and the ability to play directly from this post on any device, this game provides endless fun and excitement. Guide Sonic through challenging new levels, collect rings, and avoid enemies as you help him reach the finish line. Whether you’re playing alone or with friends, New Sonic 2 Adventure is sure to provide hours of entertainment. Jump into this new adventure today and enjoy the latest chapter in Sonic’s journey!
 
 </div>`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://www.fanfreegames.com/game.php?id_juego=21670&id_dominio=2&code=v187v8919269vvve4b1v6c4vv18vdvc4&ads=1" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

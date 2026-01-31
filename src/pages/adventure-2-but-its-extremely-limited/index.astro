@@ -31,4 +31,19 @@ Next, you can download Sonic Adventure 2 But It's Extremely Limited for free on 
 <a href="https://www.mediafire.com/file/00apzvtft96qukr/SonicAdventure2LIMITED.exe/file" class="su-button" style="background:#1F50EA" target="_blank" rel="nofollow">🎮 Download Sonic Adventure 2 But It's Extremely Limited</a>
 <h3>About Sonic Adventure 2 But It's Extremely Limited</h3>
 This mod introduces various limitations, such as reducing character speed, restricting access to certain abilities, or altering level layouts to create a more challenging and often humorous experience. The mod is popular among fans who enjoy unconventional and difficult versions of classic games, as it provides a fresh and amusing twist on the well-loved Sonic Adventure 2. It emphasizes creativity in overcoming new obstacles and offers a unique take on the original game's mechanics.`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://html-classic.itch.zone/html/5108685/SONIC ADVENTURE 2 LIMITED/index.html" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

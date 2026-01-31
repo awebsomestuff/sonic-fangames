@@ -48,4 +48,19 @@ Sonic Origins Pocket Edition is packed with exciting extras that enhance the gam
  	<li>Playable Characters: Choose from Sonic, Tails, Knuckles, and Metal Sonic.</li>
  	<li>Deleted Zones and Bosses: Explore zones and face bosses that were previously unseen.</li>
 </ul>`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://html-classic.itch.zone/html/6432666/index.html" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

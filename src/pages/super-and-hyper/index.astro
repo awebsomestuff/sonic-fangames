@@ -90,4 +90,19 @@ To play, simply use the embedded game player in this post, and you'll be able to
 Playing in the browser also means that updates and patches are automatically applied, ensuring you always have the latest version of the game without any additional effort. This convenience, combined with the nostalgic fun of playing as Super Sonic, makes this game a perfect choice for both longtime <strong>fans and newcomers to the series</strong>.
 
 Super Sonic and Hyper Sonic in Sonic 1 offer a nostalgic yet fresh experience for fans of the classic SEGA series. With intuitive controls and the ability to play directly from this post on any device, this game provides endless fun and excitement. Guide Sonic through challenging levels, avoid enemies, and collect rings as you help him achieve his goals. Whether you're playing alone or with friends, this game is sure to provide hours of entertainment. Enjoy the thrill of transforming Sonic into Super Sonic and <strong>embark on this new adventure today!</strong>`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://www.fanfreegames.com/game.php?id_juego=19940&id_dominio=2&code=v187v8919269vvve4b1v6c4vv18vdvc4&ads=1" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

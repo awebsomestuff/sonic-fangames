@@ -40,4 +40,19 @@ Next, you can download Sonic Pocket Runners for free on MacOS devices.
 Are you ready for a new and exciting platforming adventure? Our latest creation is a small school project made in just five days, but it promises a delightful challenge for gamers of all skill levels. In this game, you'll jump with the Up arrow and navigate through obstacles to reach the end. But that's not all! For those seeking an extra challenge, keep an eye out for the two Red Star Rings hidden throughout the levels. This project is the first venture into game development for our team, using Unity and C+, so while you might encounter a few glitches, we hope you'll enjoy the experience and the effort put into this creation.
 
 `} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://html-classic.itch.zone/html/3687544/index.html" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

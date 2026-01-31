@@ -29,4 +29,19 @@ To play Super Mario 64 Sonic Edition online, simply click on the "Play Super Mar
 <h3>About Super Mario 64 Sonic Edition</h3>
 
 Super Mario 64 Sonic Edition allow players to control Sonic the Hedgehog instead of Mario. In addition to changing the character model, the game incorporates elements and mechanics from the Sonic series, such as the ability to run at high speeds and perform the classic "Spin Dash." Levels may also be modified to suit Sonic's abilities, offering a unique experience that blends the worlds and gameplay styles of two of the most iconic video game franchises. This hack is very popular among fans for its creativity and for combining the best of both universes.`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://www.fanfreegames.com/game.php?id_juego=19940&id_dominio=2&code=v187v8919269vvve4b1v6c4vv18vdvc4&ads=1" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

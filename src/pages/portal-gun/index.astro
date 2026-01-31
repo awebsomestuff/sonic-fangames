@@ -103,4 +103,19 @@ Guide Sonic through levels brimming with obstacles and adversaries. The primary 
 Playing directly in the browser also ensures that any updates or patches are automatically applied, keeping the game current without any extra effort on your part. This seamless experience, paired with the excitement of Sonic’s portal adventures, <strong>makes Sonic Portal Gun a fantastic choice</strong> for both dedicated fans and new players.
 
 Sonic Portal Gun offers a dynamic and exciting platforming experience for fans of the classic Sonic series. With straightforward controls and the ability to play directly from this post on any device, this game delivers endless fun. Help Sonic navigate through intricate levels, avoid enemies, and collect golden rings on his journey to the finish line. Whether you’re playing alone or with friends, Sonic Portal Gun guarantees hours of entertainment.<strong> Embark on this new adventure today and enjoy</strong> the thrill of Sonic’s portal-powered escapades!`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://www.fanfreegames.com/game.php?id_juego=19864&id_dominio=2&code=v187v8919269vvve4b1v6c4vv18vdvc4&ads=1" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

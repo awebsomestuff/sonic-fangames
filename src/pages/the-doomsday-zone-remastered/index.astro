@@ -38,4 +38,19 @@ The core gameplay of The Doomsday Zone remains true to the original, offering th
  	<li>Improved Controls: Enjoy smoother and more responsive controls, ensuring that every jump, dash, and attack feels precise.</li>
  	<li>Secrets and Easter Eggs: Discover hidden secrets and Easter eggs that pay homage to Sonic's rich history.</li>
 </ul>`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://gamaverse.com/c/f/g/the-doomsday-zone-remastered-1716152502/" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>
