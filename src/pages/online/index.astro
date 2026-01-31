@@ -19,7 +19,7 @@ const pageHeading = "Play Sonic Online Unblocked";
 <Fragment set:html={`<div class="game-container">
 <div class="border-white top"></div>
 <div class="border-white bottom"></div>
-<img class="poster-img" src="/wp-content/uploads/2024/05/Sonic-Online.webp" alt="Sonic Online" />
+<img class="poster-img" src="/wp-content/uploads/2024/05/Sonic-Online-552w.webp" srcset="/wp-content/uploads/2024/05/Sonic-Online-552w.webp 552w, /wp-content/uploads/2024/05/Sonic-Online-960w.webp 960w" sizes="(max-width: 768px) 276px, 960px" alt="Sonic Online" loading="lazy" />
 <div class="game-box"><button id="play">Play Sonic Online Unblocked</button></div>
 </div>
 <h2>Play All Sonic Games Online Unblocked</h2>
@@ -103,4 +103,19 @@ We understand how frustrating it can be to find games blocked on certain devices
 Sonic the Hedgehog is one of the most iconic characters in video game history. Created by SEGA in 1991, Sonic has become a symbol of speed and action in the gaming world. With his ability to run at supersonic speeds and his mission to save the world from the evil Dr. Eggman, Sonic has captured the hearts of millions of players worldwide. On our website, we offer you the opportunity to relive these exciting adventures and experience all the fun of Sonic games online.
 
 Whether you are a lifelong fan or just discovering the world of Sonic, Sonic-Fangames.com has everything you need for an unforgettable gaming experience. Play Sonic Online, enjoy Sonic Unblocked, and join the action. Come on, the world of Sonic awaits you!`} />
+<script is:inline>
+const btnPlay = document.querySelector('#play');
+const boxGame = document.querySelector('.game-box');
+const containerGame = document.querySelector('.game-container');
+const posterImg = document.querySelector('.poster-img');
+const codeGame = '<iframe id="game-player" seamless="seamless" scrolling="no" src="https://scratch.mit.edu/projects/169337269/embed?referral=https%3A%2F%2Fwww.fandejuegos.com%2Fg%2Fundertale" width="960" height="340" allow="autoplay; fullscreen; camera" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
+
+btnPlay.addEventListener('click', () => {
+    boxGame.remove();
+    posterImg.remove();
+    containerGame.innerHTML += codeGame;
+    const iframeGame = document.querySelector('#game-player');
+    iframeGame.height = containerGame.clientHeight;
+});
+</script>
 </BaseLayout>

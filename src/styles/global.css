@@ -29,6 +29,10 @@ img {
   height: auto;
 }
 
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
 /* =============================================
    SU_BUTTON CONVERSION
    ============================================= */
@@ -633,13 +637,18 @@ h4 {
 }
 
 .poster-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 80%;
+  height: auto;
 }
 
 #play {
   margin: auto;
   background: #1F50EA;
-  color: black;
+  color: #fff;
   border-radius: 6px;
   border: none;
   font-size: 18px;
