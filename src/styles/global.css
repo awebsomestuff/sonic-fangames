@@ -109,6 +109,11 @@ img {
   flex-wrap: wrap;
   gap: 20px;
   align-items: flex-start;
+  contain: layout style;
+}
+
+.su-row p {
+  margin: 0;
 }
 
 .su-column {
