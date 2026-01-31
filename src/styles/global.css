@@ -30,7 +30,7 @@ img {
 }
 
 img[width][height] {
-  aspect-ratio: attr(width) / attr(height);
+  aspect-ratio: auto;
 }
 
 /* =============================================
