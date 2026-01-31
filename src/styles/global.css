@@ -29,9 +29,6 @@ img {
   height: auto;
 }
 
-img[width][height] {
-  aspect-ratio: auto;
-}
 
 /* =============================================
    SU_BUTTON CONVERSION
