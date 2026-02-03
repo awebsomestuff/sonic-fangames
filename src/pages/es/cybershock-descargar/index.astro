@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic CyberShock Fan Game | [Descarga el juego gratis] 🎮";
 const pageDescription = "👉 Embárcate en una aventura electrizante con Sonic CyberShock, una dinámica adición al universo Sonic donde las dimensiones chocan.";
 const pageCanonical = "https://sonic-fangames.com/es/cybershock-descargar/";
@@ -62,7 +63,9 @@ const pageHeading = "Sonic CyberShock Fan Game";
 </tr>
 </tbody>
 </table>
-<h2>Descargar Sonic CyberShock</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Descargar Sonic CyberShock</h2>
 <strong>Sumérgete en el mundo de alta energía de Sonic CyberShock descargando el juego hoy mismo.</strong> Únete a Sonic, Redz y sus amigos en una misión para recolectar Ultra-Shards y resolver el misterio de la grieta interdimensional. Con cada nivel diseñado para ofrecer tanto desafío como encanto, Sonic CyberShock seguramente proporcionará horas de entretenimiento. Haz clic en el botón de descarga ahora para comenzar tu aventura multidimensional.
 
 <center><iframe title="YouTube video player" src="https://www.youtube.com/embed/6lNtBjV0m2w?si=XkXFOOOr3JqK8Wbl" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Birdo's Holiday Brawl Fan Game | [Descarregar o jogo gratuito] 💡";
 const pageDescription = "👉 Prepara-te para uma aventura festiva em Birdo's Holiday Brawl, um novo jogo emocionante inspirado em títulos clássicos de Super Mario...";
 const pageCanonical = "https://sonic-fangames.com/pt/birdos-holiday-brawl-baixar/";
@@ -58,7 +59,9 @@ const pageHeading = "Birdo's Holiday Brawl Fan Game";
 </tr>
 </tbody>
 </table>
-<h2>Jogue Birdo's Holiday Brawl</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Jogue Birdo's Holiday Brawl</h2>
 Junte-se a Birdo neste jogo repleto de ação, onde você navegará pelos níveis enfrentando ondas de inimigos que emergem de frascos — assim como no amado Super Mario Bros. 2. <strong>Utilize a habilidade de Birdo de atirar ovos</strong> para derrotar inimigos e avançar no jogo. Cada nível oferece novos desafios e oportunidades para marcar pontos altos criando combos com ricos rebotes.
 
 <center><iframe title="YouTube video player" src="https://www.youtube.com/embed/3ge8-TJ7F3M?si=SakA0dH5OJXkznCa" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>

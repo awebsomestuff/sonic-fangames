@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic Overcharged Fan Games | [Descarregar o jogo gratuito] 🌪️";
 const pageDescription = "👉Entra no mundo eletrizante de Sonic Overcharged, o mais recente jogo de fãs que pretende reavivar o adorado...";
 const pageCanonical = "https://sonic-fangames.com/pt/overcharged-baixar/";
@@ -58,7 +59,9 @@ const pageHeading = "Sonic Overcharged Fan Games";
 </tr>
 </tbody>
 </table>
-<h2>Baixar Sonic Overcharged</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Baixar Sonic Overcharged</h2>
 Embarque em uma aventura como nenhuma outra em Sonic Overcharged. Este jogo oferece uma oportunidade única de interagir com o mundo do Sonic através da lente inovadora das mecânicas do Adventure, aprimoradas pela introdução de Elmo, um novo personagem. <strong>Clique no botão de download e prepare-se</strong> para mergulhar no ambiente dinâmico de Radical Coast, onde a jogabilidade clássica encontra a inovação moderna.
 <h3>Recursos de Jogabilidade</h3>
 <strong>Sonic Overcharged</strong> apresenta vários recursos de jogabilidade emocionantes:

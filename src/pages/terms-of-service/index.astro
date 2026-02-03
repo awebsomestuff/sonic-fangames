@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 ---
 
 <BaseLayout
@@ -12,7 +13,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 >
 <Fragment set:html={`
 <div class="legal-page">
-  <p><strong>Effective Date:</strong> January 29, 2026</p>
+  <p><strong>Effective Date:</strong> January 29, 2026</p>`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`
 
   <h2>1. Acceptance of Terms</h2>
   <p>By accessing and using sonic-fangames.com ("the Website"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Website.</p>

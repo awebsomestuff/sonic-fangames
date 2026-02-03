@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic Hysteria | [Download the Free Game] [All Info] 💡";
 const pageDescription = "👉Explore the intriguing yet unfinished world of Sonic Hysteria, a fangame project that, despite its closure...";
 const pageCanonical = "https://sonic-fangames.com/hysteria/";
@@ -54,7 +55,9 @@ const pageHeading = "Sonic Hysteria";
 </tr>
 </tbody>
 </table>
-<h2>Discover Sonic Hysteria</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Discover Sonic Hysteria</h2>
 Though Sonic Hysteria may not be completed, the existing content showcases the developer's efforts and dedication to creating a compelling Sonic experience. T<strong>his project, while no longer in development</strong>, provides a snapshot of a fangame with potential, encouraging players to delve into what has been crafted and appreciate the work that went into it.
 <h3>Sonic Hysteria: Gameplay and Concept</h3>
 <strong>Sonic Hysteria</strong> stands out for its:

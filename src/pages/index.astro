@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic Fan Games | [Download & Play Online for FREE] 🌀";
 const pageDescription = "👉 Welcome to the thrilling world of Sonic Fan Games! Here, creativity meets nostalgia as fans from around the globe bring their own unique..";
 const pageCanonical = "https://sonic-fangames.com/";
@@ -21,7 +22,9 @@ const pageHeading = "Sonic Fan Games";
   hreflangs={pageHreflangs}
   heading={pageHeading}
 >
-<Fragment set:html={`<div class="description-section"><strong>Welcome to the premier destination for Sonic Fan Games, ROM Hacks, and Mods!</strong> Immerse yourself in the expansive universe of fan-created Sonic content, where enthusiasts breathe new life into the classic adventures of the Blue Blur.</div>
+<Fragment set:html={`<div class="description-section"><strong>Welcome to the premier destination for Sonic Fan Games, ROM Hacks, and Mods!</strong> Immerse yourself in the expansive universe of fan-created Sonic content, where enthusiasts breathe new life into the classic adventures of the Blue Blur.</div>`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`
 
 <h2>Best Sonic Fan Games</h2>
 <div class="su-row"><div class="su-column su-column-1-3 menu-column">

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic Unleashed Recompiled | Download | How to Install | Guides";
 const pageDescription = "In this post, I’ll show you exactly how to download it, install it, what files you need, how to get it running perfectly plus guides, tips. 💫";
 const pageCanonical = "https://sonic-fangames.com/unleashed-recompiled/";
@@ -144,7 +145,9 @@ If you’re using the 64 GB model, install via microSD or external storage — i
  	<li>Controller D-pad support (even for the menus)</li>
 </ul>
 <h4>📊 Quick Comparison</h4>
-<table>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<table>
 <thead>
 <tr>
 <th>Feature</th>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic X Shadow Generations";
 const pageDescription = "Sonic X Shadow Generations - Download and play free Sonic fan games.";
 const pageCanonical = "https://sonic-fangames.com/shadow-generations/";
@@ -51,7 +52,9 @@ const pageHeading = "Sonic X Shadow Generations";
 </tr>
 </tbody>
 </table>
-<h2>What Is Sonic X Shadow Generations</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>What Is Sonic X Shadow Generations</h2>
 The gameplay retains the high-speed action that fans love but innovates with Shadow's unique mechanics. Sonic's campaign remains faithful to the original Generations, focusing on fast-paced transitions between 2D and 3D gameplay. Shadow's campaign, however, takes this further by incorporating new abilities:
 <h4>Shadow's Doom Powers</h4>
 <ol>

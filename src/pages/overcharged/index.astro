@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic Overcharged | [Download the Free Game] 🌪️";
 const pageDescription = "👉Step into the electrifying world of Sonic Overcharged, the latest fan game endeavor that aims to revive the beloved...";
 const pageCanonical = "https://sonic-fangames.com/overcharged/";
@@ -58,7 +59,9 @@ const pageHeading = "Sonic Overcharged";
 </tr>
 </tbody>
 </table>
-<h2>Download Sonic Overcharged</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Download Sonic Overcharged</h2>
 Embark on an adventure like no other in Sonic Overcharged. This game provides a unique opportunity to engage with Sonic's world through the innovative lens of Adventure mechanics, enhanced by the introduction of Elmo, a new character. <strong>Click the download button and prepare</strong> to dive into the dynamic environment of Radical Coast, where classic gameplay meets modern innovation.
 <h3>Gameplay Features</h3>
 <strong>Sonic Overcharged</strong> introduces several exciting gameplay features:

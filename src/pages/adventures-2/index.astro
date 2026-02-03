@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic 2 Adventure | & Fangames Online";
 const pageDescription = "Sonic 2 Adventure - Download and play free Sonic fan games.";
 const pageCanonical = "https://sonic-fangames.com/adventures-2/";
@@ -24,7 +25,9 @@ const pageHeading = "Sonic 2 Adventure";
 </div>
 <strong>Sonic fans, rejoice! New Sonic 2 Adventure,</strong> a fan-made hackrom, brings fresh levels and adventure. Guide Sonic through new stages, collect rings, and dodge enemies to reach the finish line. Play directly from this post with no downloads needed. Enjoy hours of entertainment solo or with friends!
 <div>
-<h2>Play New Sonic 2 Adventure Online</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Play New Sonic 2 Adventure Online</h2>
 Playing New Sonic 2 Adventure online is easy and accessible, making it perfect for both newcomers and long-time fans of the Sonic series. To get started, use the following keyboard controls:
 <ul>
  	<li><strong>START:</strong> Press the ENTER key to begin your game.</li>

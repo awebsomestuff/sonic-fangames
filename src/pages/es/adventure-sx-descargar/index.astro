@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic Adventure SX Fan Game | [Descargar el juego gratis] 💣";
 const pageDescription = "👉 Embárcate en una aventura crossover única con Sonic Adventure SX, un fangame 2D de Sonic the Hedgehog que se fusiona con el encantador...";
 const pageCanonical = "https://sonic-fangames.com/es/adventure-sx-descargar/";
@@ -54,7 +55,9 @@ const pageHeading = "Sonic Adventure SX Fan Game";
 </tr>
 </tbody>
 </table>
-<h2>Descargar Sonic Adventure SX</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Descargar Sonic Adventure SX</h2>
 Sumérgete en los vibrantes mundos de Sonic y Shantae con Sonic Adventure SX. Esta demo no solo ofrece un vistazo al contenido expansivo del juego, sino que también invita a los jugadores a experimentar la sinergia de la velocidad de Sonic y la jugabilidad mágica de Shantae. <strong>Para comenzar tu viaje a través de este crossover meticulosamente</strong> elaborado, haz clic en el botón de descarga y lee el README incluido para obtener una guía completa sobre las mecánicas y características del juego.
 <h3>Sonic Adventure SX: Jugabilidad y Características</h3>
 <strong>Sonic Adventure SX</strong> enriquece el panorama de los juegos de fans con sus características innovadoras:

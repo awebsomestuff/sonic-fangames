@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic Infinity + Fan Game [Descarregar e guiar gratuitamente] 🌪️";
 const pageDescription = "👉 Mergulhe no mundo do desenvolvimento de jogos para fãs do Sonic com a Sonic Infinity+ Demo #2, uma expansão de ponta do Sonic Infinity...";
 const pageCanonical = "https://sonic-fangames.com/pt/infinity-baixar/";
@@ -58,7 +59,9 @@ const pageHeading = "Sonic Infinity + Fan Game";
 </tr>
 </tbody>
 </table>
-<h2>Baixar Sonic Infinity+ Demo 2</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Baixar Sonic Infinity+ Demo 2</h2>
 Inicie sua jornada de desenvolvimento de jogos com o Sonic Infinity+ Demo #2. <strong>Esta demo não apenas demonstra as capacidades do Infinity+ Engine, mas também serve</strong> como um convite para os desenvolvedores iniciantes explorarem a criação de jogos. O framework é projetado para facilitar o desenvolvimento de jogos de fãs do Sonic, fornecendo ferramentas e recursos essenciais, permitindo que você se concentre na criatividade e no design. Clique no botão de download agora para começar a experimentar designs de níveis, mecânicas de jogabilidade e criações de personagens.
 <h3>Recursos do Sonic Infinity+ Demo 2</h3>
 Sonic Infinity+ oferece um conjunto robusto de recursos projetados para aprimorar a experiência do usuário e expandir as possibilidades criativas:

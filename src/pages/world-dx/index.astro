@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic World DX | [Download Free Game] [All Info] ⚽";
 const pageDescription = "👉 Step into the expansive world of Sonic World DX, an advanced Sonic Fangame that caters to fans of Sonic Adventures and Sonic Heroes. ";
 const pageCanonical = "https://sonic-fangames.com/world-dx/";
@@ -66,7 +67,9 @@ const pageHeading = "Sonic World DX";
 </tr>
 </tbody>
 </table>
-<h2>Download Sonic World DX</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Download Sonic World DX</h2>
 <strong>Immerse yourself in Sonic World DX by downloading the latest version today. This game offers a plethora of features including enhanced character animations</strong>, a vast stage roster, and expanded mod support. Experience a Sonic adventure that is both vast in scope and rich in detail. Click here to download and start your journey through Sonic World DX's enhanced and expansive universe.
 <h3>Key Features of Sonic World DX</h3>
 Sonic World DX is packed with a variety of features designed to enhance gameplay and provide a rich user experience:

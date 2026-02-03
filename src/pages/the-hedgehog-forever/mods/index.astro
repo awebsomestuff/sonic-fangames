@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic the Hedgehog Forever Mods";
 const pageDescription = "Sonic the Hedgehog Forever Mods - Download and play free Sonic fan games.";
 const pageCanonical = "https://sonic-fangames.com/the-hedgehog-forever/mods/";
@@ -16,7 +17,9 @@ const pageHeading = "Sonic the Hedgehog Forever Mods";
   hreflangs={pageHreflangs}
   heading={pageHeading}
 >
-<Fragment set:html={`<div class="description-section">Sonic the Hedgehog Forever, or simply <strong>Sonic Forever</strong>, is an amazing fan project that has enhanced the original <em>Sonic the Hedgehog (2013)</em> with new features, improved animations, and additional playable characters. However, one of the most exciting aspects of Sonic Forever is its modding capability, allowing players to further customize their experience and add their own personal touch to the game.</div>
+<Fragment set:html={`<div class="description-section">Sonic the Hedgehog Forever, or simply <strong>Sonic Forever</strong>, is an amazing fan project that has enhanced the original <em>Sonic the Hedgehog (2013)</em> with new features, improved animations, and additional playable characters. However, one of the most exciting aspects of Sonic Forever is its modding capability, allowing players to further customize their experience and add their own personal touch to the game.</div>`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`
 &nbsp;
 
 <div class="su-row"><div class="su-column su-column-1-3 menu-column">

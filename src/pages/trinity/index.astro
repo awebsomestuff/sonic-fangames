@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Sonic Trinity | [Download the Free Game] [All Info] 🎮";
 const pageDescription = "👉 Embark on a thrilling new adventure with Sonic Trinity, a fresh installment in the Sonic universe that brings together three iconic...";
 const pageCanonical = "https://sonic-fangames.com/trinity/";
@@ -66,7 +67,9 @@ const pageHeading = "Sonic Trinity";
 </tr>
 </tbody>
 </table>
-<h2>Download Sonic Trinity</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Download Sonic Trinity</h2>
 <strong>Experience the excitement of Sonic Trinity by downloading the game today. Join Sonic,</strong> Tails, and Knuckles as they dash, fly, and climb through the beautifully crafted levels of the first zone. Whether you're a seasoned Sonic enthusiast or a newcomer to the franchise, this game promises to deliver an exhilarating experience. Click the download button now to start your adventure in the world of Sonic Trinity.
 <h3>Gameplay Features of Sonic Trinity</h3>
 Sonic Trinity stands out with its array of engaging features:

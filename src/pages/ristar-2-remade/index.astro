@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
 const pageTitle = "Ristar 2 Remade Demo | [Download the Game] 🔦";
 const pageDescription = "👉Rediscover the charm of a classic with the Ristar 2 (Remade Demo), a lovingly recreated fangame of the original Ristar.";
 const pageCanonical = "https://sonic-fangames.com/ristar-2-remade/";
@@ -58,7 +59,9 @@ const pageHeading = "Ristar 2 Remade Demo";
 </tr>
 </tbody>
 </table>
-<h2>Experience Ristar 2 Remade Demo</h2>
+`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`<h2>Experience Ristar 2 Remade Demo</h2>
 Step into a world of adventure with Ristar 2 (Remade Demo), where the essence of the original Ristar gameplay is revived and enhanced for old and new fans alike. This demo offers a complete game experience, featuring all the levels and challenges originally envisioned, <strong>compacted into a short but fulfilling playthrough.</strong>
 
 <center><iframe title="YouTube video player" src="https://www.youtube.com/embed/MqGEQs-yY6g?si=gUaU_cjILcSKhXJq" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>&nbsp;
