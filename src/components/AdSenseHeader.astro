@@ -1,86 +1,46 @@
 ---
 // AdSenseHeader.astro
-// Banner de cabecera optimizado para evitar CLS:
-// - Desktop: Fijo 728x90 (Leaderboard)
-// - Mobile: Fijo 320x100 (Large Mobile Banner)
+// Banner de cabecera con altura fija de 300px para evitar CLS
 ---
 
 <div class="ad-header-container">
-  <!-- Desktop: Fijo 728x90 Leaderboard -->
-  <div class="ad-header-desktop" id="ad-header-desktop">
+  <div class="ad-header-inner">
     <ins class="adsbygoogle"
-         style="display:inline-block;width:728px;height:90px"
+         style="display:block"
          data-ad-client="ca-pub-9609544329602409"
-         data-ad-slot="3198096987"></ins>
-  </div>
-
-  <!-- Mobile: Fijo 320x100 -->
-  <div class="ad-header-mobile" id="ad-header-mobile">
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:320px;height:100px"
-         data-ad-client="ca-pub-9609544329602409"
-         data-ad-slot="3198096987"></ins>
+         data-ad-slot="3198096987"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
   </div>
 </div>
 
 <style>
-  /* Contenedor principal - altura FIJA para evitar CLS */
   .ad-header-container {
     width: 100%;
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
     background-color: #fff;
-    /* Desktop: altura fija 90px + 20px padding = 110px */
-    height: 110px;
-    overflow: hidden; /* Cortar cualquier cosa que exceda */
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
-  /* Desktop: Fijo 728x90 - sin posibilidad de expandirse */
-  .ad-header-desktop {
+  .ad-header-inner {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 728px;
-    height: 90px;
-    max-width: 728px;
-    max-height: 90px;
     overflow: hidden;
   }
 
-  /* Limitar el ins de AdSense */
-  .ad-header-desktop .adsbygoogle,
-  .ad-header-mobile .adsbygoogle {
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-  }
-
-  .ad-header-mobile {
-    display: none;
-  }
-
-  /* Mobile: mostrar 320x100 fijo, ocultar desktop */
-  @media (max-width: 767px) {
-    .ad-header-container {
-      /* Mobile: altura fija 100px + 20px padding = 120px */
-      height: 120px;
-    }
-
-    .ad-header-desktop {
-      display: none;
-    }
-
-    .ad-header-mobile {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 320px;
-      height: 100px;
-      max-width: 320px;
-      max-height: 100px;
-      overflow: hidden;
-    }
+  .ad-header-inner .adsbygoogle {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 </style>
