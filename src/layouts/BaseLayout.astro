@@ -283,5 +283,31 @@ import AdSenseHeader from '../components/AdSenseHeader.astro';
       window.addEventListener('load', loadAdSense);
     }
   </script>
+  <script>
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a[data-lightbox]');
+      if (!link) return;
+      e.preventDefault();
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      const img = document.createElement('img');
+      img.src = link.href;
+      img.alt = link.querySelector('img')?.alt || '';
+      overlay.appendChild(img);
+      document.body.appendChild(overlay);
+      requestAnimationFrame(() => overlay.classList.add('active'));
+      overlay.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        setTimeout(() => overlay.remove(), 200);
+      });
+      document.addEventListener('keydown', function handler(ev) {
+        if (ev.key === 'Escape') {
+          overlay.classList.remove('active');
+          setTimeout(() => overlay.remove(), 200);
+          document.removeEventListener('keydown', handler);
+        }
+      });
+    });
+  </script>
 </body>
 </html>

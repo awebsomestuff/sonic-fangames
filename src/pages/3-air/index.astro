@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AdSenseAfterIntro from '../../components/AdSenseAfterIntro.astro';
-const pageTitle = "Sonic 3 AIR Download";
-const pageDescription = "Sonic 3 AIR Download - Download and play free Sonic fan games.";
+const pageTitle = "Sonic 3 A.I.R. (Angel Island Revisited) | Download Free";
+const pageDescription = "Download Sonic 3 A.I.R. free — the fan remaster of Sonic 3 & Knuckles with widescreen HD, 60fps, remastered music & mods. PC, Android, Mac & Linux.";
 const pageCanonical = "https://sonic-fangames.com/3-air/";
 const pageLang = "en";
 const pageHreflangs = [];
-const pageHeading = "Sonic 3 AIR Download";
+const pageHeading = "Sonic 3 A.I.R. (Angel Island Revisited)";
 ---
 
 <BaseLayout
@@ -17,13 +17,16 @@ const pageHeading = "Sonic 3 AIR Download";
   hreflangs={pageHreflangs}
   heading={pageHeading}
 >
-<Fragment set:html={`<div class="su-row"><div class="su-column su-column-1-4">
+<Fragment set:html={`<div class="description-section">
+<div class="intro-layout">
+<img src="/wp-content/uploads/2026/3-air/sonic-3-air-intro.webp" fetchpriority="high" alt="Sonic 3 A.I.R. Angel Island Revisited logo" style="aspect-ratio: 350 / 196" width="350" height="196" />
+<div class="intro-text"><p><strong>Sonic 3 A.I.R. (Angel Island Revisited)</strong> is a fan-made remaster of the legendary Sonic 3 &amp; Knuckles that transforms the 1994 Genesis classic into a modern experience. Built by developer Eukaryot with over <strong>6 years of active development</strong>, it delivers widescreen 16:9, HD rendering, 60fps gameplay, remastered music, and a massive mod ecosystem — all completely free.</p>
+<a href="#download" class="su-button" style="background:#1F50EA;border-radius:6px;display:block">Download Sonic 3 A.I.R. Free</a></div>
+</div>
+</div>`} />
+<AdSenseAfterIntro />
+<Fragment set:html={`
 
-<img class="aligncenter size-full wp-image-787" src="/wp-content/uploads/2024/08/sonic-air-3-300w.webp" fetchpriority="high" alt="sonic air 3." style="aspect-ratio: 300 / 300" width="300" height="300" />
-
-<a href="https://github.com/Eukaryot/sonic3air/releases/download/v24.02.02.0-stable/sonic3air_game.zip" class="su-button" style="background:#1F50EA" target="_blank" rel="nofollow">⬇️ Download Sonic 3 A.I.R.</a>
-
-</div> <div class="su-column su-column-3-4">
 <table class="stats-table">
 <thead>
 <tr>
@@ -32,113 +35,132 @@ const pageHeading = "Sonic 3 AIR Download";
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>Genre</strong></td>
-<td>Action, Platformer, Retro</td>
-</tr>
-<tr>
-<td><strong>Release Date</strong></td>
-<td>Ongoing</td>
-</tr>
-<tr>
-<td><strong>State</strong></td>
-<td>Released</td>
-</tr>
-<tr>
-<td><strong>Last Update</strong></td>
-<td>Recently</td>
-</tr>
-<tr>
-<td><strong>Platforms</strong></td>
-<td>Windows, macOS</td>
-</tr>
+<tr><td><strong>Developer</strong></td><td>Eukaryot (macOS/iOS port by Sappharad)</td></tr>
+<tr><td><strong>Engine</strong></td><td>Custom engine (open source)</td></tr>
+<tr><td><strong>Platforms</strong></td><td>Windows, Linux, macOS, Android, iOS/Web (beta)</td></tr>
+<tr><td><strong>Genre</strong></td><td>Action Platformer, Retro</td></tr>
+<tr><td><strong>Characters</strong></td><td>Sonic, Tails, Knuckles (+ team combos)</td></tr>
+<tr><td><strong>Zones</strong></td><td>14 zones (full Sonic 3 &amp; Knuckles)</td></tr>
+<tr><td><strong>Price</strong></td><td>Free &amp; open source</td></tr>
 </tbody>
 </table>
-</div></div>
 
-<a href="/3-air/mods/" class="su-button" style="background:#1F50EA">▶️ Download Sonic 3 A.I.R. MODs</a>
+<div class="screenshot-gallery">
+<a href="/wp-content/uploads/2026/3-air/angel-island-full.webp" data-lightbox><img src="/wp-content/uploads/2026/3-air/angel-island-thumb.webp" alt="Sonic 3 AIR - Angel Island Zone widescreen gameplay" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/3-air/marble-garden-full.webp" data-lightbox><img src="/wp-content/uploads/2026/3-air/marble-garden-thumb.webp" alt="Sonic 3 AIR - Marble Garden Zone in HD" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/3-air/mushroom-hill-full.webp" data-lightbox><img src="/wp-content/uploads/2026/3-air/mushroom-hill-thumb.webp" alt="Sonic 3 AIR - Tails carrying Sonic through Mushroom Hill Zone" loading="lazy" /></a>
+</div>
+
+<h2 id="download" style="text-align:center;border-bottom:none;padding-bottom:0">Download Sonic 3 A.I.R.</h2>
+
+<strong>Sonic 3 A.I.R. v24.02.02.1</strong> is the latest stable release. Available for <strong>Windows, Linux, macOS, and Android</strong>, with an iOS/Web beta also available. The download is free — you will need a copy of the original Sonic 3 &amp; Knuckles ROM to play (details in the installation guide below).
+
+<div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:12px auto">
+<a href="https://github.com/Eukaryot/sonic3air/releases/download/v24.02.02.0-stable/sonic3air_game.zip" class="su-button" style="background:#1F50EA;border-radius:6px;margin:0" target="_blank" rel="nofollow">Download for Windows</a>
+<a href="https://github.com/Eukaryot/sonic3air/releases/download/v24.02.02.0-stable/sonic3air_game.tar.gz" class="su-button" style="background:#1F50EA;border-radius:6px;margin:0" target="_blank" rel="nofollow">Download for Linux</a>
+<a href="https://projects.sappharad.com/s3air_mac/" class="su-button" style="background:#1F50EA;border-radius:6px;margin:0" target="_blank" rel="nofollow">Download for macOS</a>
+<a href="https://sonic3air.org/android/android.html" class="su-button" style="background:#1F50EA;border-radius:6px;margin:0" target="_blank" rel="nofollow">Download for Android</a>
+</div>
+
+<div class="details-box">
+<h3>How to Install Sonic 3 A.I.R.</h3>
+<div class="details-grid">
+<details>
+<summary>Windows</summary>
+<p>Extract the ZIP to any folder and run <code>Sonic3AIR.exe</code>. On first launch, the game asks you to locate the original <strong>Sonic 3 &amp; Knuckles ROM</strong> (<code>Sonic_Knuckles_wSonic3.bin</code>). Check the <a href="https://docs.google.com/document/d/1oSud8dJHvdfrYbkGCfllAOp3JuTks7z4K5SwtVkXkx0/edit" target="_blank" rel="nofollow">official legal alternatives list</a> for how to obtain the ROM.</p>
+</details>
+<details>
+<summary>Linux</summary>
+<p>Extract the <code>.tar.gz</code> archive and run the executable. You will need the original Sonic 3 &amp; Knuckles ROM, same as on Windows.</p>
+</details>
+<details>
+<summary>macOS</summary>
+<p>Download the DMG from Sappharad's port page. Drag the app to Applications. If macOS blocks the app, right-click and select "Open." The ROM requirement applies here as well.</p>
+</details>
+<details>
+<summary>Android</summary>
+<p>Download the APK from the official Android page. Transfer the ROM file to your device via USB or cloud storage, then select it when the game prompts you on first launch. Loading times may be longer on low-end devices.</p>
+</details>
+</div>
+</div>
+
+<h2>The Remaster Sonic 3 Deserved</h2>
+
+Sonic 3 &amp; Knuckles is one of the most ambitious platformers ever made for the Sega Genesis. But for years, <strong>legal complications surrounding its soundtrack</strong> — tied to contributions from Michael Jackson's team — made it nearly impossible for Sega to re-release or remaster the game. While Sonic 1 and 2 got brilliant mobile remasters by Taxman and Stealth using the Retro Engine, Sonic 3 was left behind.
+
+The fan community refused to let the game fade away. First came <strong>Sonic 3 Complete</strong> (2009-2013), a ROM hack that fixed sprite issues, added customization options, and worked on original hardware. Then in 2019, Eukaryot released the first full version of Sonic 3 A.I.R., taking the concept much further with a custom engine built from the ground up. The result is what many fans call <strong>the definitive way to experience Sonic 3 &amp; Knuckles</strong> — a sentiment echoed across the community for over six years of continuous updates.
+
+<h2>What Sonic 3 A.I.R. Adds to the Original</h2>
+
+A.I.R. is not just a simple port — it's a comprehensive enhancement that modernizes every aspect of the original game while keeping its soul intact. Here are the highlights:
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0 32px">
+<div class="details-box" style="margin:0;display:flex;flex-direction:column">
+<h3 style="font-size:1.2em;margin:0 0 8px">Widescreen &amp; HD</h3>
+<p style="margin:0;font-size:0.95em;line-height:1.5;flex:1">True <strong>16:9 widescreen</strong> with extended play area — not stretched like emulators. HD rendering at 60fps with optional background blur, smooth sprite rotation, and retro scanline filters.</p>
+</div>
+<div class="details-box" style="margin:0;display:flex;flex-direction:column">
+<h3 style="font-size:1.2em;margin:0 0 8px">Remastered Audio</h3>
+<p style="margin:0;font-size:0.95em;line-height:1.5;flex:1">Optional <strong>remastered soundtrack</strong> downloadable from the in-game menu. Choose between prototype, PC Collection, or Origins versions for controversial tracks like Carnival Night and Ice Cap.</p>
+</div>
+<div class="details-box" style="margin:0;display:flex;flex-direction:column">
+<h3 style="font-size:1.2em;margin:0 0 8px">Total Customization</h3>
+<p style="margin:0;font-size:0.95em;line-height:1.5;flex:1">Choose Sonic's ability (<strong>Insta-Shield or Super Peel Out</strong>), enable Drop Dash from Mania, pick alternate level layouts, toggle Sandopolis ghosts, adjust Super/Hyper themes, and much more.</p>
+</div>
+</div>
+
+Beyond visuals and audio, A.I.R. packs in quality-of-life features that transform replay value: <strong>Time Attack mode with ghost racing</strong>, a full achievement system with creative challenges, Free Roam access to any stage, the <strong>Knuckles &amp; Tails team combo</strong> (exclusive to A.I.R.), Tails Assist flying (hold up + jump like in Mania), Max Control mode that removes the original's roll lock, and a Casual mode with no damage for younger players.
+
+<div class="screenshot-gallery">
+<a href="/wp-content/uploads/2026/3-air/death-egg-full.webp" data-lightbox><img src="/wp-content/uploads/2026/3-air/death-egg-thumb.webp" alt="Sonic 3 AIR - Super Sonic in Death Egg Zone" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/3-air/sandopolis-full.webp" data-lightbox><img src="/wp-content/uploads/2026/3-air/sandopolis-thumb.webp" alt="Sonic 3 AIR - Sandopolis Zone with Sonic and Tails" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/3-air/super-sonic-full.webp" data-lightbox><img src="/wp-content/uploads/2026/3-air/super-sonic-thumb.webp" alt="Sonic 3 AIR - Super Sonic gameplay in widescreen" loading="lazy" /></a>
+</div>
+
+<h2>All 14 Zones from Sonic 3 &amp; Knuckles</h2>
+
+A.I.R. includes <strong>every zone from both Sonic 3 and Sonic &amp; Knuckles</strong>, played as one continuous adventure the way it was originally intended. Each zone features unique mechanics, multiple paths depending on your character, and boss encounters:
+
+<strong>Sonic 3 zones:</strong> Angel Island, Hydrocity, Marble Garden, Carnival Night, Ice Cap, and Launch Base (with Big Arm re-enabled as Sonic 3's true final boss).
+
+<strong>Sonic &amp; Knuckles zones:</strong> Mushroom Hill, Flying Battery, Sandopolis, Lava Reef, Hidden Palace, Sky Sanctuary, Death Egg, and The Doomsday Zone.
+
+All three characters — <strong>Sonic, Tails, and Knuckles</strong> — play through different paths with their unique abilities. Knuckles has entirely different boss fights and route options. And for the first time, you can play as the <strong>Knuckles &amp; Tails team</strong>, a combination that was never available in the original game.
+
+<h2>Sonic 3 A.I.R. Mods</h2>
+
+One of A.I.R.'s biggest strengths is its <strong>robust mod support</strong>. The modding community has created everything from character swaps (Shadow, Silver, Cream, Rouge, and many more) to complete visual overhauls and gameplay transformations.
+
+We have a dedicated section with <strong>20+ mods</strong> ready to download — check out our full <a href="/3-air/mods/">Sonic 3 A.I.R. Mods collection</a> to browse character packs, sprite replacements, and gameplay tweaks.
+
+<h2>Sonic 3 A.I.R. FAQ</h2>
+
+<div class="details-grid">
+<details>
+<summary>Is Sonic 3 A.I.R. free?</summary>
+<p>Yes, completely free and open source. The source code is available on <a href="https://github.com/Eukaryot/sonic3air" target="_blank" rel="nofollow">GitHub</a>.</p>
+</details>
+<details>
+<summary>Do I need the original ROM to play?</summary>
+<p>Yes. Sonic 3 A.I.R. requires the original Sonic 3 &amp; Knuckles ROM file (<code>Sonic_Knuckles_wSonic3.bin</code>) to run. The project provides an <a href="https://docs.google.com/document/d/1oSud8dJHvdfrYbkGCfllAOp3JuTks7z4K5SwtVkXkx0/edit" target="_blank" rel="nofollow">official list of legal alternatives</a> for obtaining it.</p>
+</details>
+<details>
+<summary>Can I play Sonic 3 A.I.R. on Android?</summary>
+<p>Yes. Download the APK from the <a href="https://sonic3air.org/android/android.html" target="_blank" rel="nofollow">official Android page</a> and transfer the ROM file to your device. Loading times may be longer on low-end devices.</p>
+</details>
+<details>
+<summary>How do I install mods?</summary>
+<p>Place mod files in the <code>mods</code> folder inside your Sonic 3 A.I.R. directory. Enable them from the in-game mods menu. Browse our <a href="/3-air/mods/">mods collection</a> for ready-to-download options.</p>
+</details>
+<details>
+<summary>Is this better than Sonic Origins?</summary>
+<p>Both are great options. Sonic Origins is the official Sega remaster, while A.I.R. is a fan project offering significantly more customization options, mod support, and configurability. Many fans use both.</p>
+</details>
+<details>
+<summary>Does it work on iOS?</summary>
+<p>An iOS/Web beta is available through <a href="https://projects.sappharad.com/s3air_ios/" target="_blank" rel="nofollow">Sappharad's port</a>, though it may have stability limitations compared to the desktop and Android versions.</p>
+</details>
+</div>
+
 `} />
-<AdSenseAfterIntro />
-<Fragment set:html={`<h2>Sonic 3 A.I.R. For all Platforms Free</h2>
-You can download Sonic 3 A.I.R. for free using the links below. Choose your platform and click the button to start your download instantly.
-<div class="skills-grid">
-<div class="skill">
-<h3>Download Sonic 3 A.I.R. for Windows</h3>
-Enjoy Sonic 3 A.I.R. on your Windows PC. Click the button below to download the game:
-<a href="https://github.com/Eukaryot/sonic3air/releases/download/v24.02.02.0-stable/sonic3air_game.zip" class="su-button" style="background:#1F50EA" target="_blank" rel="nofollow">🪟 Download Sonic 3 A.I.R. for Windows</a>
-
-</div>
-<div class="skill">
-<h3>Download Sonic 3 A.I.R. for Mac</h3>
-Experience Sonic 3 A.I.R. on your Mac. Click the button below to start your download:
-<a href="https://projects.sappharad.com/s3air_mac/sonic3air_mac_240202.dmg" class="su-button" style="background:#1F50EA" target="_blank" rel="nofollow">⬇️ Download Sonic 3 A.I.R. for Mac</a>
-
-</div>
-<div class="skill">
-<h3>Download Sonic 3 A.I.R. for Linux</h3>
-Experience Sonic 3 A.I.R. on your Linux. Click the button below to start your download:
-<a href="https://github.com/Eukaryot/sonic3air/releases/download/v24.02.02.0-stable/sonic3air_game.tar.gz" class="su-button" style="background:#1F50EA" target="_blank" rel="nofollow">⬇️ Download Sonic 3 A.I.R. for Linux</a>
-
-</div>
-</div>
-<h2>How to Download Sonic 3 A.I.R.</h2>
-Follow these steps to download and install Sonic 3 A.I.R. on your device:
-<div class="skills-grid">
-<div class="skill-steps"><strong>Step 1:</strong> Visit the Official Download Page: Use the links provided above to go to the Sonic 3 A.I.R. download page for your platform.</div>
-<div class="skill-steps"><strong>Step 2:</strong> Start the Download: Click the "Download Now" button to download the game files.</div>
-<div class="skill-steps"><strong>Step 3:</strong> Install the Game:</div>
-<ul>
- 	<li><strong>Windows:</strong> Unpack the downloaded ZIP file to a folder on your hard drive. Ensure you unpack the files completely before running the game.</li>
- 	<li><strong>macOS:</strong> Mount the DMG file and copy Sonic 3 A.I.R. to your Applications directory.</li>
-</ul>
-<div class="skill-steps"><strong>Step 4:</strong> Start the Game: Double-click the executable file to launch Sonic 3 A.I.R. on your platform.</div>
-</div>
-<h2>Sonic 3 A.I.R. Features</h2>
-<table class="stats-table">
-<thead>
-<tr>
-<th><strong>Attribute</strong></th>
-<th><strong>Details</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Author</strong></td>
-<td>Eukaryot</td>
-</tr>
-<tr>
-<td><strong>Development Tools</strong></td>
-<td>Custom Engine, Unity (macOS port)</td>
-</tr>
-<tr>
-<td><strong>Average Session Length</strong></td>
-<td>Varies by player</td>
-</tr>
-<tr>
-<td><strong>Languages</strong></td>
-<td>English</td>
-</tr>
-<tr>
-<td><strong>Input Methods</strong></td>
-<td>Keyboard, Gamepad</td>
-</tr>
-</tbody>
-</table>
-<h2>What is Sonic 3 A.I.R.?</h2>
-<div class="skills-section">
-
-Sonic 3 A.I.R. (Angel Island Revisited) is a fan-made remaster of the classic Sega Genesis game, Sonic 3 &amp; Knuckles. It offers an enhanced experience of the original game with high-definition visuals, improved audio, and various gameplay tweaks that make it feel like a modern release while staying true to the retro roots. The game utilizes the original Sonic 3 &amp; Knuckles ROM, enhancing it with widescreen support, smoother animations, and customizable settings, making it the definitive way to experience this beloved classic.Sonic 3 A.I.R. takes advantage of modern hardware to deliver smooth gameplay at 60 FPS, with options to adjust graphics, audio, and control settings to suit your preferences. Whether you're a long-time Sonic fan or new to the series, Sonic 3 A.I.R. provides a polished and nostalgic gaming experience that is sure to delight.
-
-</div>
-<div class="su-box"><div class="su-box-title" style="background:#007BFF">Controls</div><div class="su-box-content">
-<ul>
- 	<li><strong>Movement:</strong> Use the arrow keys or a gamepad to control Sonic, Tails, or Knuckles.</li>
- 	<li><strong>Jump:</strong> Press the A, S, D keys (or the equivalent on your gamepad) to jump or use special abilities.</li>
- 	<li><strong>Super Transformation:</strong> Press W or Y to transform if you've collected all Chaos Emeralds.</li>
- 	<li><strong>Pause:</strong> Press Enter or Start to pause the game.</li>
- 	<li><strong>Other Functions:</strong> Use specific key combinations to toggle fullscreen, adjust audio, or access game settings.</li>
-</ul>
-</div></div>
-
-Sonic 3 A.I.R. is a must-play for any fan of the Sonic franchise or retro gaming. Its enhancements make it the best way to experience Sonic 3 &amp; Knuckles on modern systems. With customizable options, smoother gameplay, and faithful recreation of the original levels, Sonic 3 A.I.R. stands out as an exceptional fan project. Download it today and relive the classic Sonic adventure with a fresh twist.`} />
 </BaseLayout>
