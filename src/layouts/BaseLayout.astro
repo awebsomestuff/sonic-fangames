@@ -186,6 +186,41 @@ import AdSenseHeader from '../components/AdSenseHeader.astro';
       .site-content { margin: 10px; padding: 15px; }
     }
   </style>
+  <style is:global>
+    .interlinks-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 40px 30px;
+    }
+    .interlinks-section a.columna {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #f0f4ff;
+      border: 1px solid #dbe4ff;
+      border-radius: 12px;
+      padding: 6px;
+      text-align: center;
+      transition: border-color .2s, transform .15s;
+      cursor: pointer;
+    }
+    .interlinks-section a.columna:hover {
+      border-color: #6366f1;
+      transform: translateY(-2px);
+    }
+    .interlinks-section .texto-imagen {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a1d2e;
+      margin: 6px 0 2px;
+    }
+    .interlinks-section .imagen-redondeada {
+      margin: 0 auto;
+    }
+    @media (max-width: 850px) {
+      .interlinks-section { padding: 10px 15px 15px; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -237,6 +272,8 @@ import AdSenseHeader from '../components/AdSenseHeader.astro';
     {heading && <h1>{heading}</h1>}
     <slot />
   </main>
+
+  <slot name="interlinks" />
 
   <div class="lang-switcher">
     <a href="/">English</a>

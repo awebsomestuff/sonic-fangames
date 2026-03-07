@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdSenseAfterIntro from '../components/AdSenseAfterIntro.astro';
-const pageTitle = "Sonic Fan Games | [Download & Play Online for FREE] 🌀";
-const pageDescription = "👉 Welcome to the thrilling world of Sonic Fan Games! Here, creativity meets nostalgia as fans from around the globe bring their own unique..";
+const pageTitle = "Sonic Fan Games - Download & Play 70+ Free Fangames";
+const pageDescription = "Browse the best collection of Sonic fan games. Download free fangames for PC and Android — 3D adventures, 2D platformers, fighting games, kart racers, and beyond.";
 const pageCanonical = "https://sonic-fangames.com/";
 const pageLang = "en";
 const pageHreflangs = [
@@ -22,78 +22,388 @@ const pageHeading = "Sonic Fan Games";
   hreflangs={pageHreflangs}
   heading={pageHeading}
 >
-<Fragment set:html={`<div class="description-section"><strong>Welcome to the premier destination for Sonic Fan Games, ROM Hacks, and Mods!</strong> Immerse yourself in the expansive universe of fan-created Sonic content, where enthusiasts breathe new life into the classic adventures of the Blue Blur.</div>`} />
+<Fragment set:html={`<div class="description-section"><strong>The largest collection of Sonic fan games, ROM hacks, and mods — all free to download and play.</strong> From full-length 2D platformers and 3D adventures to fighting games, kart racers, and total engine rebuilds, everything here is made by the community that keeps pushing Sonic forward.
+<div class="intro-buttons"><a href="#featured" class="intro-btn">Featured Fan Games</a><a href="#tier-list" class="intro-btn">Fan Games Tier-List</a><a href="#get-started" class="intro-btn">How to Get Started</a></div></div>`} />
 <AdSenseAfterIntro />
 <Fragment set:html={`
 
-<h2>Best Sonic Fan Games</h2>
-<div class="su-row"><div class="su-column su-column-1-3 menu-column">
-<p style="text-align: center;"><a href="/galactic/"><img class="aligncenter wp-image-1488 " src="/wp-content/uploads/2025/01/Sonic-Galactic-fan-game-1024x576-386w.webp" srcset="/wp-content/uploads/2025/01/Sonic-Galactic-fan-game-1024x576-386w.webp 386w, /wp-content/uploads/2025/01/Sonic-Galactic-fan-game-1024x576-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" fetchpriority="high" alt="Sonic Galactic fan game." style="aspect-ratio: 386 / 217" width="386" height="217" /><strong>Sonic Galactic</strong></a></p>
-<p style="text-align: center;"><a href="/breeze/"><img class="aligncenter wp-image-1327" src="/wp-content/uploads/2024/10/BREEZE-sonic-fan-game-386w.webp" srcset="/wp-content/uploads/2024/10/BREEZE-sonic-fan-game-386w.webp 386w, /wp-content/uploads/2024/10/BREEZE-sonic-fan-game-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="BREEZE sonic fan game." style="aspect-ratio: 386 / 217" width="386" height="217" /><strong>Sonic Breeze</strong></a></p>
-</div> <div class="su-column su-column-1-3 menu-column">
-<p style="text-align: center;"><a href="/unleashed-recompiled/"><img class="aligncenter size-full wp-image-1510" src="/wp-content/uploads/2025/06/Sonic-Unleashed-Recompiled-How-to-Download-install-and-features-300w.webp" alt="Sonic Unleashed Recompiled How to Download install and features" style="aspect-ratio: 300 / 180" width="300" height="180" /><strong>Download Unleashed Recompiled</strong></a></p>
-<p style="text-align: center;"><a href="/3-air/"><img class="aligncenter size-full" src="/wp-content/uploads/2026/3-air/sonic-3-air-intro.webp" alt="Sonic 3 A.I.R. Angel Island Revisited" style="aspect-ratio: 350 / 196" width="350" height="196" /><strong>Sonic AIR 3</strong></a></p>
-</div> <div class="su-column su-column-1-3 menu-column">
-<p style="text-align: center;"><a href="/shadow-generations/mods/"><img class="aligncenter wp-image-1462" src="/wp-content/uploads/2025/01/SONIC-X-SHADOW-GENERATIONS-386w.webp" srcset="/wp-content/uploads/2025/01/SONIC-X-SHADOW-GENERATIONS-386w.webp 386w, /wp-content/uploads/2025/01/SONIC-X-SHADOW-GENERATIONS-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="SONIC X SHADOW GENERATIONS." style="aspect-ratio: 386 / 217" width="386" height="217" /><strong>Shadow Generations Mods</strong></a></p>
-<p style="text-align: center;"><a href="/generations/"><img class="aligncenter wp-image-1328" src="/wp-content/uploads/2024/10/GENERATIONS-mods-sonic-fan-game-386w.webp" srcset="/wp-content/uploads/2024/10/GENERATIONS-mods-sonic-fan-game-386w.webp 386w, /wp-content/uploads/2024/10/GENERATIONS-mods-sonic-fan-game-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="GENERATIONS mods sonic fan game." style="aspect-ratio: 386 / 217" width="386" height="217" /><strong>Sonic Generations</strong></a></p>
-</div></div>
+<style>
+.fg-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:20px 0 32px}
+.fg-card{display:flex;align-items:center;gap:14px;background:#f0f4ff;border:1px solid #e2e5ea;border-radius:12px;padding:12px;text-decoration:none;color:#1a1d2e;transition:border-color .2s,transform .15s}
+.fg-card:hover{border-color:#6366f1;transform:translateY(-2px)}
+.fg-card-img{width:179px;min-width:179px;height:101px;object-fit:cover;border-radius:8px}
+.fg-card-info{flex:1;min-width:0}
+.fg-card-head{display:flex;align-items:center;gap:8px;margin:0 0 4px;justify-content:space-between;flex-wrap:wrap}
+.fg-card-title{font-size:20px;font-weight:700;color:#111;margin:0;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.fg-tags{display:flex;gap:4px;flex-shrink:0}
+.fg-tag{font-size:12px;font-weight:600;padding:3px 8px;border-radius:4px;background:#dbe4ff;color:#3b5998;white-space:nowrap;line-height:1.4}
+.fg-card-desc{font-size:14px;color:#64748b;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:900px){.fg-gallery{grid-template-columns:1fr}}
+@media(max-width:768px){.fg-card-img{width:150px;min-width:150px;height:84px}.fg-card-title{font-size:17px}.fg-card-head{flex-direction:column;align-items:flex-start;gap:4px}.fg-tags{order:1}}
+.fg-filters{display:flex;gap:8px;margin:0 0 16px;flex-wrap:wrap;justify-content:center}
+.fg-filter{font-size:16px;font-weight:600;padding:6px 17px;border-radius:6px;border:1px solid #e2e5ea;background:#fff;color:#475569;cursor:pointer;transition:all .2s;user-select:none}
+.fg-filter:hover{border-color:#6366f1;color:#6366f1}
+.fg-filter.active{background:#6366f1;color:#fff;border-color:#6366f1}
+.fg-filter-sep{width:1px;height:24px;background:#d1d5db;align-self:center}
+.fg-card.fg-hidden{display:none}
+.fg-counter{text-align:center;font-size:14px;color:#64748b;margin:-8px 0 12px}
+.fg-empty{display:none;text-align:center;padding:32px 16px;color:#94a3b8;font-size:15px}
+.fg-empty.visible{display:block}
+@media(max-width:400px){.fg-card{gap:10px;padding:10px}.fg-card-img{width:115px;min-width:115px;height:64px}.fg-card-title{font-size:15px}.fg-tag{font-size:10px;padding:2px 6px}}
+/* Tier S cards */
+.tier-s-card{background:#f0f4ff;border:2px solid #dbe4ff;border-radius:16px;padding:24px;margin:0 0 20px;transition:border-color .2s}
+.tier-s-card:hover{border-color:#6366f1}
+.tier-s-card h4{font-size:1.4em;margin:0 0 8px;color:#1F50EA}
+.tier-s-card h4 a{color:#1F50EA;text-decoration:none}
+.tier-s-card h4 a:hover{text-decoration:underline}
+.tier-s-card .tier-s-badge{display:inline-block;background:#6366f1;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:8px;vertical-align:middle;letter-spacing:.5px}
+.tier-s-card>p{font-size:1em;line-height:1.6;color:#444;margin:0 0 16px}
+.tier-s-previews{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tier-s-previews img{width:100%;height:auto;border-radius:8px;aspect-ratio:16/9;object-fit:cover}
+@media(max-width:768px){.tier-s-card{padding:16px}.tier-s-card h4{font-size:1.2em}.tier-s-previews{gap:6px}}
+@media(max-width:480px){.tier-s-previews{grid-template-columns:1fr}.tier-s-previews img{aspect-ratio:16/9}}
+/* Types grid */
+.types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 32px}
+.type-card{background:#f0f4ff;border:1px solid #dbe4ff;border-radius:12px;padding:20px;transition:border-color .2s,transform .15s}
+.type-card:hover{border-color:#6366f1;transform:translateY(-2px)}
+.type-card h3{font-size:1.1em;color:#1F50EA;margin:0 0 8px;text-align:left}
+.type-card p{font-size:.95em;line-height:1.5;color:#444;margin:0;text-align:left}
+.type-card a{color:#1F50EA;text-decoration:none;font-weight:600}
+.type-card a:hover{text-decoration:underline}
+@media(max-width:900px){.types-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.types-grid{grid-template-columns:1fr}}
+.tier-a-badge{display:inline-block;background:#f59e0b;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:8px;vertical-align:middle;letter-spacing:.5px}
+.stats-table{font-size:.97em}
+.stats-table tbody tr td:last-child{font-weight:400}
+.description-section{padding:20px 40px;margin:15px auto}
+.intro-buttons{display:flex;gap:8px;margin:12px 0 0;flex-wrap:wrap;justify-content:center}
+.description-section a.intro-btn{padding:6px 18px;font-size:13px;font-weight:600;border-radius:4px;letter-spacing:.3px;margin-top:0;box-shadow:none;transition:background .2s,transform .15s}
+.description-section a.intro-btn:hover{background:#1a3fc0;transform:translateY(-1px);box-shadow:none}
+.columna{background:#f0f4ff;border:1px solid #dbe4ff;border-radius:12px;padding:6px;text-align:center;transition:border-color .2s,transform .15s}
+.columna:hover{border-color:#6366f1;transform:translateY(-2px)}
+.columna .imagen-redondeada{margin:0 auto}
+.columna .texto-imagen{font-size:14px;font-weight:600;color:#1a1d2e;margin:6px 0 2px}
+</style>
 
-<h2>Get Mods For Sonic Fan Games</h2>
-<div class="su-row">
-<div class="su-column su-column-1-4 menu-column">
-<a href="/3-air/mods/">
-<img class="aligncenter wp-image-1326" src="/wp-content/uploads/2024/10/3-A.I.R.-MODS-sonic-fan-game-386w.webp" srcset="/wp-content/uploads/2024/10/3-A.I.R.-MODS-sonic-fan-game-386w.webp 386w, /wp-content/uploads/2024/10/3-A.I.R.-MODS-sonic-fan-game-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="3 A.I.R. MODS sonic fan game." loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+<h2 id="featured">Featured Sonic Fan Games</h2>
+<div class="fg-filters">
+<button class="fg-filter active" data-filter="all">All</button>
+<button class="fg-filter" data-filter="Windows">Windows</button>
+<button class="fg-filter" data-filter="Android">Android</button>
+<button class="fg-filter" data-filter="PS4/PS5">PS4/PS5</button>
+<button class="fg-filter" data-filter="2D">2D</button>
+<button class="fg-filter" data-filter="3D">3D</button>
+<span class="fg-filter-sep"></span>
+<button class="fg-filter" data-filter="Platformer">Platformer</button>
+<button class="fg-filter" data-filter="Fighting">Fighting</button>
+<button class="fg-filter" data-filter="Racing">Racing</button>
+</div>
+<p class="fg-counter">Showing <span id="fg-count">30</span> of 30 games</p>
+<div class="fg-gallery">
+<p class="fg-empty">No games match the selected filters.</p>
+<a href="/robo-blast-2/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2024/08/Sonic-Robo-Blast-2-300x188-300w.webp" alt="Sonic Robo Blast 2" loading="eager" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Robo Blast 2</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">Android</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">The greatest 3D Sonic fan game ever made, built on a modified Doom engine with 25+ levels, three playable characters, 32-player online multiplayer, and over 1,000 community mods.</p></div>
+</a>
+<a href="/sonic-p-06/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-p-06/p06-intro.webp" alt="Sonic P-06" loading="eager" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic P-06</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">Android</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A ground-up reconstruction of Sonic 2006 built in Unity, featuring all three campaigns (Sonic, Shadow, Silver), 9 playable characters, rebuilt physics, and visuals that surpass official Sonic titles.</p></div>
+</a>
+<a href="/sonic-triple-trouble-16-bit/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/triple-trouble-16-bit/intro.webp" alt="Sonic Triple Trouble 16-Bit" loading="eager" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Triple Trouble 16-Bit</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">Android</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A five-year fan remake that reimagines the 1994 Game Gear exclusive as a full Sega Genesis adventure, featuring real-time character swapping, five playable characters, and level design that rivals Sonic 3 &amp; Knuckles.</p></div>
+</a>
+<a href="/sonic-gt/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-gt/sonic-gt-intro.webp" alt="Sonic GT" loading="eager" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic GT</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A momentum-driven 3D fan game built on the custom Bumper Engine with 4 massive zones, 7 playable characters, and physics-based level design where every bit of speed is earned through terrain and player skill.</p></div>
+</a>
+<a href="/3-air/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/3-air/sonic-3-air-intro.webp" alt="Sonic 3 A.I.R." loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic 3 A.I.R.</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">Android</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A fan-made remaster of the legendary Sonic 3 &amp; Knuckles with widescreen 16:9, HD rendering at 60fps, remastered music options, extensive customization, and a massive mod ecosystem.</p></div>
+</a>
+<a href="/sonic-time-twisted/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-time-twisted/time-twisted-intro.webp" alt="Sonic Time Twisted" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Time Twisted</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">Android</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A massive original 2D fan game that merges Sonic CD's time travel mechanics with the momentum-based level design of Sonic 3 &amp; Knuckles, delivering 8 zones, 28 acts, 10 bosses, and multiple endings.</p></div>
+</a>
+<a href="/sonic-before-the-sequel/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/before-the-sequel/bts-intro.webp" alt="Sonic Before the Sequel" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Before the Sequel</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A legendary 2D fan game bridging Sonic 1 and Sonic 2, rebuilt from the ground up with Genesis-quality controls, original zones, memorable boss fights, and one of the most iconic soundtracks in fan gaming history.</p></div>
+</a>
+<a href="/sonic-after-the-sequel/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/after-the-sequel/sonic-after-the-sequel-intro.webp" alt="Sonic After the Sequel" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic After the Sequel</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">Android</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A full-length 2D adventure filling the gap between Sonic 2 and Sonic 3 &amp; Knuckles, featuring a completely different mechanic in every level, varied boss fights, and an entirely original soundtrack.</p></div>
+</a>
+<a href="/sonic-daybreak/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-daybreak/sonic-daybreak-intro.webp" alt="Sonic Daybreak" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Daybreak</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A stunning 3D fangame built in Unreal Engine that fuses momentum-driven classic physics with Modern Sonic's speed and Adventure-style exploration, featuring three dense multi-path stages.</p></div>
+</a>
+<a href="/sonic-and-the-fallen-star/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/fallen-star/fallen-star-intro.webp" alt="Sonic and the Fallen Star" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic and the Fallen Star</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A complete 2D fangame with 9 full zones, entirely original custom sprites, animated cutscenes, a dual original soundtrack, and a unique super transformation called Nova Sonic.</p></div>
+</a>
+<a href="/sonic-definitive/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-definitive/sonic-definitive-intro.webp" alt="Sonic Definitive" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Definitive</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A cinematic 2D boost-style fangame inspired by Sonic Rush, featuring layered combat, cinematic action sequences mid-gameplay, and a multi-phase Mecha Sonic boss fight packed into a highly polished zone.</p></div>
+</a>
+<a href="/sonic-rush-rerun/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-rush-rerun/sonic-rush-rerun-intro.webp" alt="Sonic Rush Rerun" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Rush Rerun</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A fan-made 2.5D reimagining of Sonic Rush rebuilt for PC with low-poly 3D visuals, combining the best mechanics from Rush, Rush Adventure, and Colors DS with native 144hz+ support.</p></div>
+</a>
+<a href="/dr-robotniks-ring-racers/" class="fg-card" data-genre="Racing">
+<img class="fg-card-img" src="/wp-content/uploads/2026/ring-racers/ring-racers-intro.webp" alt="Dr. Robotnik's Ring Racers" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Dr. Robotnik's Ring Racers</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A free, technically demanding kart racer built on the Doom engine featuring 233 tracks, 54+ characters, 24 items, online multiplayer with voice chat, and full mod support.</p></div>
+</a>
+<a href="/sonic-encore/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-encore/sonic-encore-intro.webp" alt="Sonic Encore" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Encore</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A passion project that rebuilds iconic zones from the classic 2D Sonic games as full 3D levels, delivering 6 zones, 12 acts, boss fights, and 6 playable characters with momentum-driven physics.</p></div>
+</a>
+<a href="/sonic-megamix-mania/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/megamix-mania/megamix-mania-intro.webp" alt="Sonic Megamix Mania" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Megamix Mania</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A massive Sonic Mania Plus mod that reimagines the legendary Megamix ROM hack with 6 fully redesigned zones, 6 playable characters with distinct abilities, and professional-grade pixel art.</p></div>
+</a>
+<a href="/smackdown/" class="fg-card" data-genre="Fighting">
+<img class="fg-card-img" src="/wp-content/uploads/2024/smackdown/ultimate-art-intro.webp" alt="Ultimate Sonic Smackdown" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Smackdown</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A full-fledged Sonic fighting game built on Unreal Engine with a complete roster, unique movesets, flashy supers, plus its sequel Ultimate with tag team 2v2/3v3 format and rollback netcode.</p></div>
+</a>
+<a href="/world-dx/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2024/04/Sonic-World-DX_Fangame-200w.webp" alt="Sonic World DX" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic World DX</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A free 3D sandbox fangame inspired by Sonic Adventure and Sonic Heroes, packed with 39 playable characters, 52 level acts across 12 stages, a Chao Garden, and team companion mechanics.</p></div>
+</a>
+<a href="/sonic-dimensions/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-dimensions/dimensions-intro.webp" alt="Sonic Dimensions" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Dimensions</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A unique 2D boost platformer that pairs Sonic Advance-style GBA pixel art with modern boost mechanics, featuring 7 zones connected by a hub world, a skill shop, and Super/Hyper transformations.</p></div>
+</a>
+<a href="/sonic-x-treme-unity/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-x-treme-unity/xtreme-intro.webp" alt="Sonic X-Treme Unity" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic X-Treme Unity</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A fan-made recreation of the most famous cancelled Sonic game, originally planned for the Sega Saturn in 1996. Rebuilt in Unity with four surreal zones and the iconic fisheye camera perspective.</p></div>
+</a>
+<a href="/sonic-battle-r/" class="fg-card" data-genre="Racing">
+<img class="fg-card-img" src="/wp-content/uploads/2026/sonic-battle-r/battle-r-intro.webp" alt="Sonic Battle R" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Battle R</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A high-speed 3D racing and combat fangame where every race is a chaotic brawl at 300 mph. Features over 60 tracks, online multiplayer, Chaos-powered combat abilities, and guest characters.</p></div>
+</a>
+<a href="/momentum/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/momentum/momentum-intro.webp" alt="Sonic Momentum" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Momentum</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">Android</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A 2D fan game that reimagines Sonic Frontiers' cyber space stages through the lens of the Advance and Rush era, featuring 7 stages, 3 playable characters, and a full combo-based combat system.</p></div>
+</a>
+<a href="/galactic/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/galactic/galactic-intro.webp" alt="Sonic Galactic" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Galactic</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A Saturn-era inspired 2D platformer with hand-pixeled art, five playable characters including an original mole named Tunnel, and a vertical level design philosophy widely called the Sonic Mania successor.</p></div>
+</a>
+<a href="/rush-3d/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/rush-3d/rush-3d-intro.webp" alt="Sonic Rush 3D" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Rush 3D</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A fan-made 3D reimagining of the Nintendo DS classic Sonic Rush, rebuilding Leaf Storm into a full 3D platformer in Unity with boost mechanics, aerial trick combos, and a low-poly DS-era art style.</p></div>
+</a>
+<a href="/project-reignition/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/project-reignition/reignition-intro.webp" alt="Sonic Project Reignition" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Project Reignition</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A ground-up fan remake of Sonic and the Secret Rings built in Godot, replacing all motion controls with modern gamepad input. Features six playable worlds, boss fights, and 50+ abilities.</p></div>
+</a>
+<a href="/unleashed-recompiled/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/unleashed-recompiled/unleashed-recompiled-intro.webp" alt="Sonic Unleashed Recompiled" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Unleashed Recompiled</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A fan-made native PC port of the Xbox 360 version of Sonic Unleashed, running without emulation via static recompilation. Features unlocked frame rates, up to 4K resolution, and full mod compatibility.</p></div>
+</a>
+<a href="/breeze/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/breeze/breeze-intro.webp" alt="Sonic Breeze" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Breeze</p><div class="fg-tags"><span class="fg-tag">PS4/PS5</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A 3D Sonic fan game built entirely inside Dreams for PS4 and PS5, featuring boost gameplay, homing attacks, air dashes, a hub world with Tails and Knuckles, and real momentum physics.</p></div>
+</a>
+<a href="/velocity/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2024/09/Sonic-Velocity-386w.webp" alt="Sonic Velocity" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Velocity</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">3D</span></div></div><p class="fg-card-desc">A 3D boost fangame running on a 100% custom-built engine, featuring drifting, rail grinding, skydiving, a multi-phase boss fight with cutscenes, full voice acting, and an original soundtrack.</p></div>
+</a>
+<a href="/the-fighters-blitz-hyper-edition/" class="fg-card" data-genre="Fighting">
+<img class="fg-card-img" src="/wp-content/uploads/2026/the-fighters-blitz-hyper-edition/fighters-blitz-intro.webp" alt="Sonic The Fighters Blitz" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic The Fighters Blitz HE</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A fan-made 2D fighting game serving as a spiritual sequel to SEGA's 1996 arcade classic, featuring 14+ characters, tag team battles with assist mechanics, online multiplayer, and a full arcade mode.</p></div>
+</a>
+<a href="/colors-demastered/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2026/colors-demastered/colors-demastered-intro.webp" alt="Sonic Colors Demastered" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic Colors Demastered</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A 2D Rush-style reimagining of Sonic Colors built in GameMaker, featuring 25 levels across 5 zones, six wisp color powers, a Skill Shop for upgrades, and a completely original soundtrack.</p></div>
+</a>
+<a href="/3d-in-2d/" class="fg-card">
+<img class="fg-card-img" src="/wp-content/uploads/2024/10/Sonic-3D-in-2D-386w.webp" alt="Sonic 3D in 2D" loading="lazy" />
+<div class="fg-card-info"><div class="fg-card-head"><p class="fg-card-title">Sonic 3D in 2D</p><div class="fg-tags"><span class="fg-tag">Windows</span><span class="fg-tag">2D</span></div></div><p class="fg-card-desc">A complete 2D side-scrolling reimagining of Sonic 3D Blast with Genesis-era physics, featuring 8 zones, 15 acts, 15 boss fights, and 8 playable characters including 5 secret unlockables.</p></div>
 </a>
 </div>
+<script>
+(function(){
+var btns=document.querySelectorAll('.fg-filter');
+var cards=document.querySelectorAll('.fg-card');
+var allBtn=document.querySelector('.fg-filter[data-filter="all"]');
+var countEl=document.getElementById('fg-count');
+var emptyEl=document.querySelector('.fg-empty');
+var total=cards.length;
+var genreList=['Platformer','Fighting','Racing'];
+var platformList=['Windows','Android','PS4/PS5'];
+var styleList=['2D','3D'];
+function getGroup(f){
+if(genreList.indexOf(f)!==-1)return'genre';
+if(platformList.indexOf(f)!==-1)return'platform';
+if(styleList.indexOf(f)!==-1)return'style';
+return null;
+}
+function calcMatches(){
+var active=document.querySelectorAll('.fg-filter.active:not([data-filter="all"])');
+var results=[];
+if(active.length===0){cards.forEach(function(c){results.push({card:c,show:true})});return results}
+var groups={};
+active.forEach(function(b){
+var f=b.getAttribute('data-filter');
+var g=getGroup(f);
+if(g){if(!groups[g])groups[g]=[];groups[g].push(f)}
+});
+cards.forEach(function(c){
+var cTags=[];
+c.querySelectorAll('.fg-tag').forEach(function(t){cTags.push(t.textContent)});
+var cGenre=c.getAttribute('data-genre')||'Platformer';
+var pass=true;
+if(groups.platform){var m=false;groups.platform.forEach(function(f){if(cTags.indexOf(f)!==-1)m=true});if(!m)pass=false}
+if(groups.style){var m=false;groups.style.forEach(function(f){if(cTags.indexOf(f)!==-1)m=true});if(!m)pass=false}
+if(groups.genre){var m=false;groups.genre.forEach(function(f){if(cGenre===f)m=true});if(!m)pass=false}
+results.push({card:c,show:pass});
+});
+return results;
+}
+function applyFilters(){
+var active=document.querySelectorAll('.fg-filter.active:not([data-filter="all"])');
+if(active.length===0)allBtn.classList.add('active');else allBtn.classList.remove('active');
+var results=calcMatches();
+var shown=0;
+results.forEach(function(r){
+if(r.show){r.card.classList.remove('fg-hidden');shown++}else{r.card.classList.add('fg-hidden')}
+});
+countEl.textContent=shown;
+if(shown===0)emptyEl.classList.add('visible');else emptyEl.classList.remove('visible');
+}
+btns.forEach(function(b){b.addEventListener('click',function(){
+var f=b.getAttribute('data-filter');
+if(f==='all'){btns.forEach(function(x){x.classList.remove('active')});allBtn.classList.add('active');cards.forEach(function(c){c.classList.remove('fg-hidden')});countEl.textContent=total;emptyEl.classList.remove('visible');return}
+b.classList.toggle('active');
+applyFilters();
+});});
+})();
+</script>
 
-<div class="su-column su-column-1-4 menu-column">
-<a href="/generations/mods/">
-<img class="aligncenter wp-image-1045" src="/wp-content/uploads/2024/09/GENERATIONS-Sonic-Fan-Game-Mods-386w.webp" srcset="/wp-content/uploads/2024/09/GENERATIONS-Sonic-Fan-Game-Mods-386w.webp 386w, /wp-content/uploads/2024/09/GENERATIONS-Sonic-Fan-Game-Mods-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="GENERATIONS Sonic Fan Game Mods" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
-</a>
+<h2 id="tier-list">The Best Sonic Fan Games Ranked — Our Tier List</h2>
+<p>Not all sonic fan games are created equal. After playing through dozens of them and cross-referencing what the community consistently praises, we put together <strong>a tier list that separates the must-plays from the rest</strong>. Whether you are looking for a 2D classic that rivals official Sega releases or a 3D experience that outshines Sonic Team's own efforts, this ranking has you covered.</p>
+<h3>S Tier — The Two Best Sonic Fan Games Ever Made</h3>
+<p>These are not just good fan games. These are games that would hold up as commercial releases. If you only play two sonic fan games in your life, make it these.</p>
+<div class="tier-s-card">
+<h4><a href="/robo-blast-2/">Sonic Robo Blast 2</a> <span class="tier-s-badge">S TIER</span></h4>
+<p>Not just a fan game — it is THE fan game. Built on a modified Doom engine and refined over more than 20 years of continuous development, SRB2 delivers a full campaign with 25+ levels, three playable characters, 32-player online multiplayer, and a modding community that has produced over a thousand add-ons. The level design rewards exploration and momentum in a way that most official 3D Sonic games never figured out. Widely regarded as "the pillar of Sonic fan games." There is nothing else like it.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2024/roboblast/gfz1st-full.webp" data-lightbox><img src="/wp-content/uploads/2024/roboblast/gfz1st-thumb.webp" alt="Sonic Robo Blast 2 - Greenflower Zone gameplay" loading="lazy" /></a>
+<a href="/wp-content/uploads/2024/roboblast/srb20006-full.webp" data-lightbox><img src="/wp-content/uploads/2024/roboblast/srb20006-thumb.webp" alt="Sonic Robo Blast 2 - Multiplayer gameplay" loading="lazy" /></a>
+<a href="/wp-content/uploads/2024/roboblast/srb21716-full.webp" data-lightbox><img src="/wp-content/uploads/2024/roboblast/srb21716-thumb.webp" alt="Sonic Robo Blast 2 - Characters gameplay" loading="lazy" /></a>
 </div>
+</div>
+<div class="tier-s-card">
+<h4><a href="/sonic-triple-trouble-16-bit/">Sonic Triple Trouble 16-bit</a> <span class="tier-s-badge">S TIER</span></h4>
+<p>Takes the 1994 Game Gear original and reimagines it as the Genesis game it always deserved to be. Every level has been expanded and redesigned, the sprite work is immaculate, and you can swap between five playable characters on the fly. It looks and feels like a lost Sega game from the golden era. Many consider it "genuinely one of the best Sonic fan games ever made" and "the perfect Sonic experience." That is not hyperbole — this game earned every bit of that praise.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2026/triple-trouble-16-bit/screen1-full.webp" data-lightbox><img src="/wp-content/uploads/2026/triple-trouble-16-bit/screen1-thumb.webp" alt="Sonic Triple Trouble 16-Bit - Great Turquoise Zone gameplay" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/triple-trouble-16-bit/screen2-full.webp" data-lightbox><img src="/wp-content/uploads/2026/triple-trouble-16-bit/screen2-thumb.webp" alt="Sonic Triple Trouble 16-Bit - Sunset Park Zone train sequence" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/triple-trouble-16-bit/screen3-full.webp" data-lightbox><img src="/wp-content/uploads/2026/triple-trouble-16-bit/screen3-thumb.webp" alt="Sonic Triple Trouble 16-Bit - Robotnik Winter Zone snowboarding" loading="lazy" /></a>
+</div>
+</div>
+<h3>A+ Tier — The Best of the Best</h3>
+<p>These sonic fan games are excellent. Each one brings something unique to the table, and any of them could easily be someone's personal favorite.</p>
+<div class="tier-s-card">
+<h4><a href="/sonic-gt/">Sonic GT</a> <span class="tier-a-badge">A+ TIER</span></h4>
+<p>Built on a custom engine called Bumper Engine, Sonic GT delivers momentum-driven 3D platforming across 4 full zones with boss fights. Seven playable characters — including unlockable Classic Sonic and Metal Sonic — explore massive levels packed with alternate routes and a Chaos Emerald hunting system. One of the most complete fan games currently available, and it keeps getting bigger with every update.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2026/sonic-gt/coastal-zone-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-gt/coastal-zone-thumb.webp" alt="Sonic GT - Ocean Paradise coastal zone" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/sonic-gt/canyon-loop-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-gt/canyon-loop-thumb.webp" alt="Sonic GT - Giant loop in Hill Top zone" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/sonic-gt/night-rings-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-gt/night-rings-thumb.webp" alt="Sonic GT - Sunset Boulevard neon city" loading="lazy" /></a>
+</div>
+</div>
+<div class="tier-s-card">
+<h4><a href="/sonic-before-the-sequel/">Before the Sequel</a> <span class="tier-a-badge">A+ TIER</span></h4>
+<p>Bridges Sonic 1 and Sonic 2 narratively with an iconic original soundtrack that rivals the best in the franchise. Originally created by LakeFeperd in 2011 — the developer who went on to create Spark the Electric Jester — this rebuilt 2026 version by Usumily features updated sprites, near-Genesis-accurate controls, and the same legendary music. You can feel the talent in every level.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2026/before-the-sequel/bts-sonic-forest-full.webp" data-lightbox><img src="/wp-content/uploads/2026/before-the-sequel/bts-sonic-forest-thumb.webp" alt="Before the Sequel - Hilltop Heights zone" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/before-the-sequel/bts-sonic-rain-full.webp" data-lightbox><img src="/wp-content/uploads/2026/before-the-sequel/bts-sonic-rain-thumb.webp" alt="Before the Sequel - Rainy night stage" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/before-the-sequel/bts-tails-jungle-full.webp" data-lightbox><img src="/wp-content/uploads/2026/before-the-sequel/bts-tails-jungle-thumb.webp" alt="Before the Sequel - Tails in tropical zone" loading="lazy" /></a>
+</div>
+</div>
+<div class="tier-s-card">
+<h4><a href="/sonic-p-06/">Sonic P-06</a> <span class="tier-a-badge">A+ TIER</span></h4>
+<p>A ground-up reconstruction of Sonic 2006 in Unity by solo developer ChaosX. Nine playable characters — Sonic, Shadow, Silver, Tails, Knuckles, Rouge, Omega, Blaze, and Amy — across three full campaigns with rebuilt controls, reworked physics, and visuals that surpass the original. Available on PC and Android. This is the Sonic Adventure 3 that never was.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2026/sonic-p-06/wave-ocean-sonic-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-p-06/wave-ocean-sonic-thumb.webp" alt="Sonic P-06 - Wave Ocean beach level" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/sonic-p-06/white-acropolis-results-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-p-06/white-acropolis-results-thumb.webp" alt="Sonic P-06 - S Rank on White Acropolis" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/sonic-p-06/shadow-cutscene-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-p-06/shadow-cutscene-thumb.webp" alt="Sonic P-06 - Shadow cutscene" loading="lazy" /></a>
+</div>
+</div>
+<div class="tier-s-card">
+<h4><a href="/sonic-time-twisted/">Sonic Time Twisted</a> <span class="tier-a-badge">A+ TIER</span></h4>
+<p>Sonic CD meets Sonic 3 &amp; Knuckles across 8 zones, 28 acts, and 10 bosses — with Sonic, Tails, and Knuckles all playable. Features Sonic CD's time travel mechanic, 3D special stages, Chaos Emeralds and Time Stones, cinematic cutscenes, and multiple endings. Available on Windows, macOS, Linux, and Android. Over a decade in the making by Overbound — once you start playing, you simply cannot put it down.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2026/sonic-time-twisted/stt1-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-time-twisted/stt1-thumb.webp" alt="Sonic Time Twisted - Industrial zone gameplay" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/sonic-time-twisted/stt2-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-time-twisted/stt2-thumb.webp" alt="Sonic Time Twisted - 3D special stage" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/sonic-time-twisted/stt3-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-time-twisted/stt3-thumb.webp" alt="Sonic Time Twisted - Open field zone" loading="lazy" /></a>
+</div>
+</div>
+<div class="tier-s-card">
+<h4><a href="/smackdown/">Sonic Smackdown</a> <span class="tier-a-badge">A+ TIER</span></h4>
+<p>Built in Unreal Engine, Sonic Smackdown is a legitimate competitive fighting game with unique movesets per character, 1v1, 2v2, and 3v3 tag modes, and rollback netcode for online play. The Ultimate version features cel-shaded 3D models, DBFZ-inspired mechanics, and full controller support including fightsticks. This is not a novelty — it stands on its own merits alongside Street Fighter and Guilty Gear.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2024/smackdown/ultimate-greenhill-full.webp" data-lightbox><img src="/wp-content/uploads/2024/smackdown/ultimate-greenhill-thumb.webp" alt="Sonic Smackdown - Shadow vs Sonic on Green Hill" loading="lazy" /></a>
+<a href="/wp-content/uploads/2024/smackdown/ultimate-select-full.webp" data-lightbox><img src="/wp-content/uploads/2024/smackdown/ultimate-select-thumb.webp" alt="Sonic Smackdown - Character select screen" loading="lazy" /></a>
+<a href="/wp-content/uploads/2024/smackdown/ultimate-mecha-full.webp" data-lightbox><img src="/wp-content/uploads/2024/smackdown/ultimate-mecha-thumb.webp" alt="Sonic Smackdown - Mecha Sonic counter hit" loading="lazy" /></a>
+</div>
+</div>
+<div class="tier-s-card">
+<h4><a href="/sonic-and-the-fallen-star/">Sonic and the Fallen Star</a> <span class="tier-a-badge">A+ TIER</span></h4>
+<p>A complete 2D adventure spanning 9 full zones with Sonic and Tails playable, special stages, and animated cutscenes between every zone. What sets it apart is its entirely original art direction — custom sprites, hand-crafted palettes, and a dual original soundtrack by Holly Taylor. Features a unique "Nova Sonic" super transformation. One of the most visually distinct classic-style fan games ever made.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2026/fallen-star/screen2.webp" data-lightbox><img src="/wp-content/uploads/2026/fallen-star/screen2.webp" alt="Sonic and the Fallen Star - Sapphire Sights Zone" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/fallen-star/screen3.webp" data-lightbox><img src="/wp-content/uploads/2026/fallen-star/screen3.webp" alt="Sonic and the Fallen Star - Colorful level design" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/fallen-star/screen4.webp" data-lightbox><img src="/wp-content/uploads/2026/fallen-star/screen4.webp" alt="Sonic and the Fallen Star - Boss battle" loading="lazy" /></a>
+</div>
+</div>
+<div class="tier-s-card">
+<h4><a href="/sonic-daybreak/">Sonic Daybreak</a> <span class="tier-a-badge">A+ TIER</span></h4>
+<p>Built in Unreal Engine on the Velocity Plus framework by developer Novazaru, Sonic Daybreak fuses classic momentum physics with Modern Sonic speed and Adventure-style exploration. Features one of the largest movesets in any Sonic game, commercial-quality visuals, multi-path stages with Red Rings, and an S-rank system. Reviewers gave it a straight 10 out of 10.</p>
+<div class="tier-s-previews">
+<a href="/wp-content/uploads/2026/sonic-daybreak/tropical-haven-1-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-daybreak/tropical-haven-1-thumb.webp" alt="Sonic Daybreak - Tropical Haven stage" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/sonic-daybreak/tropical-haven-2-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-daybreak/tropical-haven-2-thumb.webp" alt="Sonic Daybreak - Lush tropical environment" loading="lazy" /></a>
+<a href="/wp-content/uploads/2026/sonic-daybreak/tropical-haven-3-full.webp" data-lightbox><img src="/wp-content/uploads/2026/sonic-daybreak/tropical-haven-3-thumb.webp" alt="Sonic Daybreak - High-speed platforming" loading="lazy" /></a>
+</div>
+</div>
+<h3>A Tier — Solid Picks Worth Your Time</h3>
+<p>These fan games may not have the universal acclaim of the tiers above, but they each offer something genuinely worth experiencing.</p>
+<table class="stats-table">
+<thead><tr><th>Game</th><th style="text-align:left">Why it stands out</th></tr></thead>
+<tbody>
+<tr><td><a href="/world-dx/">Sonic World DX</a></td><td style="text-align:left">Sonic Adventure-style sandbox with 39 characters, 52 level acts, and a Chao Garden.</td></tr>
+<tr><td><a href="/sonic-definitive/">Sonic Definitive</a></td><td style="text-align:left">Cinematic 2D boost game inspired by Sonic Rush with mid-gameplay action sequences.</td></tr>
+<tr><td><a href="/3-air/">Sonic 3 A.I.R.</a></td><td style="text-align:left">The definitive Sonic 3 &amp; Knuckles: widescreen, 60fps, full mod support. "Truly the best version of Sonic 3."</td></tr>
+<tr><td><a href="/breeze/">Sonic Sapphire</a></td><td style="text-align:left">Built in Dreams for PS4/PS5 with Shadow playable, impressive visuals, and a parry system.</td></tr>
+<tr><td><a href="/rush-3d/">Sonic Rush 3D</a></td><td style="text-align:left">3D reimagining of the DS classic with low-poly charm. "If you play anything from SAGE 2024, play this."</td></tr>
+<tr><td><a href="/sonic-encore/">Sonic Encore</a></td><td style="text-align:left">Classic zones rebuilt as full 3D levels with momentum-driven physics. A fan favorite.</td></tr>
+<tr><td><a href="/dr-robotniks-ring-racers/">Dr. Robotnik's Ring Racers</a></td><td style="text-align:left">Kart racer on the SRB2 engine with 233 tracks, 54+ characters, and online multiplayer.</td></tr>
+<tr><td><a href="/sonic-after-the-sequel/">After the Sequel</a></td><td style="text-align:left">Bridges Sonic 2 and 3 with creative level mechanics. Opinions are split, but the creativity is undeniable.</td></tr>
+<tr><td><a href="/galactic/">Sonic Galactic</a></td><td style="text-align:left">Saturn-era pixel art, original character Tunnel, and levels full of fresh ideas.</td></tr>
+<tr><td><a href="/sonic-dimensions/">Sonic Dimensions</a></td><td style="text-align:left">Advance-style sprites blended with boost mechanics. Classic precision meets modern adrenaline.</td></tr>
+<tr><td><a href="/sonic-megamix-mania/">Sonic Megamix</a></td><td style="text-align:left">Legendary ROM hack of Sonic 1. Its developers went on to work on Sonic Mania.</td></tr>
+<tr><td><a href="/sonic-x-treme-unity/">Extreme Unity</a></td><td style="text-align:left">Resurrects the cancelled Sega Saturn game with its surreal fisheye camera.</td></tr>
+<tr><td><a href="/sonic-battle-r/">Sonic Battle R</a></td><td style="text-align:left">Chaotic online racing at absurd speeds. Pure multiplayer fun.</td></tr>
+</tbody>
+</table>
 
-<div class="su-column su-column-1-4 menu-column">
-<a href="/adventures-2/mods/">
-<img class="aligncenter wp-image-1044" src="/wp-content/uploads/2024/09/ADVENTURE-2-Sonic-Fan-Game-Mods-386w.webp" srcset="/wp-content/uploads/2024/09/ADVENTURE-2-Sonic-Fan-Game-Mods-386w.webp 386w, /wp-content/uploads/2024/09/ADVENTURE-2-Sonic-Fan-Game-Mods-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="ADVENTURE 2 Sonic Fan Game Mods" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
-</a>
-</div>
 
-<div class="su-column su-column-1-4 menu-column">
-<a href="/the-hedgehog-forever/mods/">
-<img class="aligncenter wp-image-1317" src="/wp-content/uploads/2024/09/HEDGEHOG-FOREVER-386w.webp" srcset="/wp-content/uploads/2024/09/HEDGEHOG-FOREVER-386w.webp 386w, /wp-content/uploads/2024/09/HEDGEHOG-FOREVER-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="HEDGEHOG FOREVER." loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
-</a>
-</div>
-</div>
-<h2>New Sonic Fan Games</h2>
-<div class="su-row"><div class="su-column su-column-1-3 menu-column">
-<a href="/sonic-daybreak/"><img class="aligncenter size-full" src="/wp-content/uploads/2026/sonic-daybreak/sonic-daybreak-intro.webp" alt="Sonic Daybreak 3D fangame" loading="lazy" style="aspect-ratio: 350 / 197" width="350" height="197" /></a>
-<a href="/3d-in-2d/"><img class="aligncenter size-full wp-image-1338" src="/wp-content/uploads/2024/10/Sonic-3D-in-2D-386w.webp" srcset="/wp-content/uploads/2024/10/Sonic-3D-in-2D-386w.webp 386w, /wp-content/uploads/2024/10/Sonic-3D-in-2D-500w.webp 500w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic 3D in 2D" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/the-fighters-blitz-hyper-edition/"><img class="aligncenter wp-image-1293" src="/wp-content/uploads/2024/09/Sonic-The-Fighters-Blitz-Hyper-Edition-386w.webp" srcset="/wp-content/uploads/2024/09/Sonic-The-Fighters-Blitz-Hyper-Edition-386w.webp 386w, /wp-content/uploads/2024/09/Sonic-The-Fighters-Blitz-Hyper-Edition-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic The Fighters Blitz Hyper Edition" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/rush-3d/"><img class="aligncenter size-full wp-image-1192" src="/wp-content/uploads/2024/09/Sonic-Rush-3D-386w.webp" srcset="/wp-content/uploads/2024/09/Sonic-Rush-3D-386w.webp 386w, /wp-content/uploads/2024/09/Sonic-Rush-3D-512w.webp 512w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic Rush 3D" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/project-reignition/"><img class="aligncenter size-full wp-image-1193" src="/wp-content/uploads/2024/09/Project-Reignition-386w.webp" srcset="/wp-content/uploads/2024/09/Project-Reignition-386w.webp 386w, /wp-content/uploads/2024/09/Project-Reignition-512w.webp 512w" sizes="(max-width: 768px) 345px, 386px" alt="Project Reignition" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/rescue-tails/"><img class="aligncenter size-full wp-image-1242" src="/wp-content/uploads/2024/09/Sonic-2-Rescue-Tails-300x169-300w.webp" alt="Sonic 2 Rescue Tails" loading="lazy" style="aspect-ratio: 300 / 169" width="300" height="169" /></a>
-</div><div class="su-column su-column-1-3 menu-column">
-<a href="/sonic-and-the-fallen-star/"><img class="aligncenter size-full" src="/wp-content/uploads/2026/fallen-star/fallen-star-intro.webp" alt="Sonic and the Fallen Star fan game" loading="lazy" style="aspect-ratio: 350 / 198" width="350" height="198" /></a>
-<a href="/battle-r-prototype-v3/"><img class="aligncenter size-full wp-image-1291" src="/wp-content/uploads/2024/09/Sonic-Battle-R-Prototype-V3-386w.webp" srcset="/wp-content/uploads/2024/09/Sonic-Battle-R-Prototype-V3-386w.webp 386w, /wp-content/uploads/2024/09/Sonic-Battle-R-Prototype-V3-500w.webp 500w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic Battle R Prototype V3" loading="lazy" style="aspect-ratio: 386 / 309" width="386" height="309" /></a>
-<a href="/colors-demastered/"><img class="aligncenter size-full wp-image-1195" src="/wp-content/uploads/2024/09/Sonic-Colors-Demastered-386w.webp" srcset="/wp-content/uploads/2024/09/Sonic-Colors-Demastered-386w.webp 386w, /wp-content/uploads/2024/09/Sonic-Colors-Demastered-512w.webp 512w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic Colors Demastered" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/skyfall/"><img class="aligncenter size-full wp-image-1194" src="/wp-content/uploads/2024/09/Sonic-Skyfall-386w.webp" srcset="/wp-content/uploads/2024/09/Sonic-Skyfall-386w.webp 386w, /wp-content/uploads/2024/09/Sonic-Skyfall-512w.webp 512w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic Skyfall" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/momentum/"><img class="aligncenter size-full" src="/wp-content/uploads/2026/momentum/momentum-intro.webp" alt="Sonic Momentum Beta Edition fan game" loading="lazy" style="aspect-ratio: 350 / 196" width="350" height="196" /></a>
-</div><div class="su-column su-column-1-3 menu-column">
-<a href="/sonic-definitive/"><img class="aligncenter size-full" src="/wp-content/uploads/2026/sonic-definitive/sonic-definitive-intro.webp" alt="Sonic Definitive fan game" loading="lazy" style="aspect-ratio: 350 / 198" width="350" height="198" /></a>
-<a href="/sonic-rush-rerun/"><img class="aligncenter size-full" src="/wp-content/uploads/2026/sonic-rush-rerun/sonic-rush-rerun-intro.webp" alt="Sonic Rush Rerun fan game" loading="lazy" style="aspect-ratio: 350 / 180" width="350" height="180" /></a>
-<a href="/smackdown/"><img class="aligncenter size-full wp-image-1337" src="/wp-content/uploads/2024/10/Sonic-Smackdown-386w.webp" srcset="/wp-content/uploads/2024/10/Sonic-Smackdown-386w.webp 386w, /wp-content/uploads/2024/10/Sonic-Smackdown-500w.webp 500w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic Smackdown" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/eclipse/"><img class="aligncenter size-full wp-image-1292" src="/wp-content/uploads/2024/09/Sonic-Eclipse-386w.webp" srcset="/wp-content/uploads/2024/09/Sonic-Eclipse-386w.webp 386w, /wp-content/uploads/2024/09/Sonic-Eclipse-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic Eclipse" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/velocity/"><img class="aligncenter size-full wp-image-1196" src="/wp-content/uploads/2024/09/Sonic-Velocity-386w.webp" srcset="/wp-content/uploads/2024/09/Sonic-Velocity-386w.webp 386w, /wp-content/uploads/2024/09/Sonic-Velocity-512w.webp 512w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic Velocity" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" /></a>
-<a href="/fighting-heroes-king-of-the-ring/"><img class="aligncenter size-full wp-image-1241" src="/wp-content/uploads/2024/09/Sonic-Fighting-Heroes-King-of-The-Ring-300x257-300w.webp" alt="Sonic Fighting Heroes King of The Ring" loading="lazy" style="aspect-ratio: 300 / 257" width="300" height="257" /></a>
-</div></div>
-<h2>Best Sonic Fan Games</h2>
+<h2 id="get-started">How to Get Started with Sonic Fan Games</h2>
+<p>Every sonic fan game featured on this site is <strong>completely free to download and play</strong>. No catches, no subscriptions, no hidden costs. These are passion projects made by fans, for fans.</p>
+<p>Most games run on <strong>Windows</strong>, and several also support <strong>Android</strong>. A few projects built in Dreams are available on <strong>PS4 and PS5</strong>. You do not need a powerful PC for the majority of them — many run on modest hardware since they are built with accessibility in mind.</p>
+<p>If you are new and wondering where to start, here are four recommendations that cover different styles:</p>
+<ol>
+<li><strong><a href="/sonic-triple-trouble-16-bit/">Sonic Triple Trouble 16-bit</a></strong> — The perfect entry point for classic Sonic fans. Polished, complete, and feels like an official game.</li>
+<li><strong><a href="/robo-blast-2/">Sonic Robo Blast 2</a></strong> — The best 3D Sonic fan game, with endless content and mods to keep you going.</li>
+<li><strong><a href="/3-air/">Sonic 3 A.I.R.</a></strong> — If you want to replay a classic, this is the ultimate version of Sonic 3 &amp; Knuckles.</li>
+<li><strong><a href="/smackdown/">Sonic Smackdown</a></strong> — Something completely different: a legit fighting game with Sonic characters.</li>
+</ol>
+<p>Every game on this site has its own dedicated page with screenshots, details, and a direct download link. Pick one that catches your eye and jump in — you might be surprised at how good these fan-made sonic games really are.</p>
+
+<h2>More Sonic Fan Games</h2>
 <div class="contenedor">
-<div class="columna"><a href="/robo-blast-2/">
-<img class="imagen-redondeada" src="/wp-content/uploads/2024/08/Sonic-Robo-Blast-2-386w.webp" srcset="/wp-content/uploads/2024/08/Sonic-Robo-Blast-2-386w.webp 386w, /wp-content/uploads/2024/08/Sonic-Robo-Blast-2-640w.webp 640w" sizes="(max-width: 768px) 345px, 386px" alt="Sonic Robo Blast 2" loading="lazy" style="aspect-ratio: 386 / 241" width="386" height="241" />
-</a>
-<p class="texto-imagen">Sonic Robo Blast 2</p>
-
-</div>
 <div class="columna"><a href="/sega-vs-capcom-the-next-level/">
 <img class="imagen-redondeada" src="/wp-content/uploads/2024/08/SEGA-VS-CAPCOM-The-Next-Level-386w.webp" srcset="/wp-content/uploads/2024/08/SEGA-VS-CAPCOM-The-Next-Level-386w.webp 386w, /wp-content/uploads/2024/08/SEGA-VS-CAPCOM-The-Next-Level-400w.webp 400w" sizes="(max-width: 768px) 345px, 386px" alt="SEGA VS CAPCOM: The Next Level" loading="lazy" style="aspect-ratio: 386 / 386" width="386" height="386" />
 </a>
@@ -106,16 +416,11 @@ const pageHeading = "Sonic Fan Games";
 <p class="texto-imagen">Sonic Freedom</p>
 
 </div>
+
 <div class="columna"><a href="/nights-moonlight-dreams/">
 <img class="imagen-redondeada" src="/wp-content/uploads/2024/04/NiGHTS-moonlight-dreams_Fangame-200w.webp" alt="Night Moonlight Dreams" loading="lazy" style="aspect-ratio: 200 / 200" width="200" height="200" />
 </a>
 <p class="texto-imagen">Night Moonlight Dreams</p>
-
-</div>
-<div class="columna"><a href="/world-dx/">
-<img class="imagen-redondeada" src="/wp-content/uploads/2024/04/Sonic-World-DX_Fangame-200w.webp" alt="Sonic World DX" loading="lazy" style="aspect-ratio: 200 / 200" width="200" height="200" />
-</a>
-<p class="texto-imagen">Sonic World DX</p>
 
 </div>
 <div class="columna"><a href="/titan-v/">
@@ -152,12 +457,6 @@ const pageHeading = "Sonic Fan Games";
 <img class="imagen-redondeada" src="/wp-content/uploads/2024/04/Sonic-Ball_Fangame-200w.webp" alt="Sonic Ball" loading="lazy" style="aspect-ratio: 200 / 145" width="200" height="145" />
 </a>
 <p class="texto-imagen">Sonic Ball</p>
-
-</div>
-<div class="columna"><a href="/battle-r-prototype-v2/">
-<img class="imagen-redondeada" src="/wp-content/uploads/2024/04/Sonic-Battle-R-Prototype-V2_Fangame-200w.webp" alt="Sonic Battle R Prototype V2" loading="lazy" style="aspect-ratio: 200 / 113" width="200" height="113" />
-</a>
-<p class="texto-imagen">Sonic Battle R Prototype V2</p>
 
 </div>
 <div class="columna"><a href="/blast-next/">
@@ -322,69 +621,104 @@ const pageHeading = "Sonic Fan Games";
 <p class="texto-imagen">Sonic Relations</p>
 
 </div>
+<div class="columna"><a href="/shadow-generations/mods/">
+<img class="imagen-redondeada" src="/wp-content/uploads/2025/01/SONIC-X-SHADOW-GENERATIONS-386w.webp" alt="Shadow Generations Mods" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+</a>
+<p class="texto-imagen">Shadow Generations Mods</p>
+
 </div>
-<div class="description-section">
+<div class="columna"><a href="/generations/">
+<img class="imagen-redondeada" src="/wp-content/uploads/2024/10/GENERATIONS-mods-sonic-fan-game-386w.webp" alt="Sonic Generations" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+</a>
+<p class="texto-imagen">Sonic Generations</p>
+
+</div>
+<div class="columna"><a href="/rescue-tails/">
+<img class="imagen-redondeada" src="/wp-content/uploads/2024/09/Sonic-2-Rescue-Tails-300x169-300w.webp" alt="Sonic 2 Rescue Tails" loading="lazy" style="aspect-ratio: 300 / 169" width="300" height="169" />
+</a>
+<p class="texto-imagen">Sonic 2 Rescue Tails</p>
+
+</div>
+<div class="columna"><a href="/skyfall/">
+<img class="imagen-redondeada" src="/wp-content/uploads/2024/09/Sonic-Skyfall-386w.webp" alt="Sonic Skyfall" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+</a>
+<p class="texto-imagen">Sonic Skyfall</p>
+
+</div>
+<div class="columna"><a href="/eclipse/">
+<img class="imagen-redondeada" src="/wp-content/uploads/2024/09/Sonic-Eclipse-386w.webp" alt="Sonic Eclipse" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+</a>
+<p class="texto-imagen">Sonic Eclipse</p>
+
+</div>
+<div class="columna"><a href="/fighting-heroes-king-of-the-ring/">
+<img class="imagen-redondeada" src="/wp-content/uploads/2024/09/Sonic-Fighting-Heroes-King-of-The-Ring-300x257-300w.webp" alt="Sonic Fighting Heroes King of The Ring" loading="lazy" style="aspect-ratio: 300 / 257" width="300" height="257" />
+</a>
+<p class="texto-imagen">Sonic Fighting Heroes</p>
+
+</div>
+</div>
+
 <h2>What Are Sonic Fan Games?</h2>
-<strong>Sonic Fan Games</strong> are unofficial projects developed by dedicated fans who draw inspiration from Sega's iconic Sonic the Hedgehog series. These games offer novel experiences, introducing unique levels, storylines, and gameplay mechanics that both honor the original titles and provide fresh twists.
+<p><strong>Sonic fan games</strong> are unofficial games created by fans of the franchise — built from scratch using custom engines, game development tools, or modifications of existing Sonic titles. They are <strong>free</strong>, community-driven, and range from short tech demos to <strong>fully polished experiences that rival commercial releases</strong>.</p>
+<p>The history goes back further than most people realize. In the early 2000s, Flash-based Sonic games flooded sites like Newgrounds and became many fans' first taste of what the community could create. As tools improved, so did the ambitions. <strong>The Sonic Amateur Games Expo (SAGE)</strong>, an annual online event that has been running since 2000, became the central showcase where developers debut their projects. SAGE is to sonic fan games what E3 once was to the industry — the place where the community gathers to see what is new.</p>
+<p>What started as hobbyist experiments has evolved into something much bigger. Some of the best sonic fan games today feature <strong>original engines, professional-grade art, full voice acting, and soundtracks</strong> that hold their own against official Sega releases. The talent pipeline is real, too: developers behind projects like Sonic Megamix and other notable fan works were recruited to create <strong>Sonic Mania</strong>, the critically acclaimed official game that many consider the best Sonic title in decades. The fan game scene is not just a tribute to the franchise — <strong>it is actively pushing it forward</strong>.</p>
 
+<h2>Types of Sonic Fan Games</h2>
+<p>The world of sonic fan games is more diverse than you might expect. Here is a breakdown of the main categories, with examples you can play right now.</p>
+<div class="types-grid">
+<div class="type-card">
+<h3>Classic 2D Platformers</h3>
+<p>The largest and most popular category. Standouts include <a href="/sonic-triple-trouble-16-bit/">Triple Trouble 16-bit</a>, <a href="/sonic-before-the-sequel/">Before the Sequel</a>, <a href="/sonic-time-twisted/">Time Twisted</a>, <a href="/sonic-and-the-fallen-star/">Fallen Star</a>, <a href="/galactic/">Galactic</a>, and <a href="/overture/">Overture</a>. If you grew up with the Mega Drive games, this is where you will feel right at home.</p>
 </div>
-<div class="skills-section">
-<div class="skills-grid">
-<div class="skill-steps"><strong>Innovative Gameplay:</strong> Engage with new adventures featuring creative level designs and challenges.</div>
-<div class="skill-steps"><strong>Original Storylines:</strong> Delve into imaginative narratives that expand the Sonic universe.</div>
-<div class="skill-steps"><strong>Diverse Art Styles:</strong> Appreciate a variety of visual interpretations, from retro pixel art to modern graphics.</div>
+<div class="type-card">
+<h3>3D Fan Games</h3>
+<p><a href="/sonic-gt/">Sonic GT</a> and <a href="/sonic-daybreak/">Daybreak</a> represent the peak of momentum-based 3D gameplay. <a href="/sonic-p-06/">Sonic P-06</a> proves that Sonic 2006's vision was sound. <a href="/robo-blast-2/">Robo Blast 2</a> remains the king after 20+ years.</p>
+</div>
+<div class="type-card">
+<h3>ROM Hacks &amp; Remakes</h3>
+<p><a href="/3-air/">Sonic 3 A.I.R.</a> is the definitive Sonic 3, and <a href="/sonic-megamix-mania/">Megamix</a> is the legendary hack that helped launch careers at Sega.</p>
+</div>
+<div class="type-card">
+<h3>Fighting Games</h3>
+<p><a href="/smackdown/">Sonic Smackdown</a> delivers a Street Fighter-caliber experience with rollback netcode. <a href="/the-fighters-blitz-hyper-edition/">Fighters Blitz Hyper Edition</a> cranks up the chaos.</p>
+</div>
+<div class="type-card">
+<h3>Racing Games</h3>
+<p><a href="/dr-robotniks-ring-racers/">Dr. Robotnik's Ring Racers</a> is a technical marvel with 200+ tracks. <a href="/sonic-battle-r/">Sonic Battle R</a> combines racing with combat.</p>
+</div>
+<div class="type-card">
+<h3>Mods</h3>
+<p>Beyond standalone fan games, there is a massive modding scene built around official titles and fan engines. We cover mods in their own dedicated section on the site.</p>
 </div>
 </div>
-<img class="aligncenter size-full wp-image-41" src="/wp-content/uploads/2024/04/Sonic-Freedom_Fangame-200w.webp" alt="Sonic Freedom_Fangame" loading="lazy" style="aspect-ratio: 200 / 200" width="200" height="200" />
-<div class="description-section">
-<h3>Sonic ROM Hacks Guide</h3>
-<strong>ROM Hacks</strong> involve modifying the original game files (ROMs) to alter graphics, levels, music, and gameplay. Within the Sonic community, ROM hacks are particularly popular, enabling fans to craft challenging versions of classic games or entirely new adventures using the original game's engine.
 
+<h2>Get Mods For Sonic Fan Games</h2>
+<div class="su-row">
+<div class="su-column su-column-1-4 menu-column">
+<a href="/3-air/mods/">
+<img class="aligncenter wp-image-1326" src="/wp-content/uploads/2024/10/3-A.I.R.-MODS-sonic-fan-game-386w.webp" srcset="/wp-content/uploads/2024/10/3-A.I.R.-MODS-sonic-fan-game-386w.webp 386w, /wp-content/uploads/2024/10/3-A.I.R.-MODS-sonic-fan-game-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="3 A.I.R. MODS sonic fan game." loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+</a>
 </div>
-<div class="features-section">
-<div class="features-grid">
-<div class="feature-item"><strong>Enhanced Difficulty:</strong> Some hacks are designed to be exceptionally challenging, requiring precise skill and timing.</div>
-<div class="feature-item"><strong>New Levels and Worlds:</strong> Experience completely redesigned stages that offer a fresh take on beloved classics.</div>
-<div class="feature-item"><strong>Custom Graphics and Music:</strong> Enjoy revamped visuals and soundtracks that provide a new aesthetic experience.</div>
-</div>
-</div>
-<img class="aligncenter size-full wp-image-110" src="/wp-content/uploads/2024/04/Sonic-3-SMS_Fangame-200w.webp" alt="Sonic 3 SMS_Fangame" loading="lazy" style="aspect-ratio: 200 / 178" width="200" height="178" />
-<div class="description-section">
-<h3>Exploring Mods for Sonic Games</h3>
-<strong>Mods</strong> are modifications made to existing games, enhancing or altering aspects like graphics, gameplay, and features. In the Sonic franchise, mods can range from simple graphical changes to comprehensive overhauls that introduce new characters, levels, or mechanics.
 
+<div class="su-column su-column-1-4 menu-column">
+<a href="/generations/mods/">
+<img class="aligncenter wp-image-1045" src="/wp-content/uploads/2024/09/GENERATIONS-Sonic-Fan-Game-Mods-386w.webp" srcset="/wp-content/uploads/2024/09/GENERATIONS-Sonic-Fan-Game-Mods-386w.webp 386w, /wp-content/uploads/2024/09/GENERATIONS-Sonic-Fan-Game-Mods-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="GENERATIONS Sonic Fan Game Mods" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+</a>
 </div>
-<div class="features-section">
-<div class="features-grid">
-<div class="feature-item"><strong>Character Swaps:</strong> Play as different characters within the Sonic universe or from other franchises.</div>
-<div class="feature-item"><strong>Gameplay Tweaks:</strong> Adjust game physics, add new abilities, or modify enemy behaviors.</div>
-<div class="feature-item"><strong>Level Expansions:</strong> Access new levels or worlds added to the original game.</div>
-</div>
-</div>
-<img class="aligncenter size-full wp-image-118" src="/wp-content/uploads/2024/04/Sonic-Infinity_Fangame-200w.webp" alt="Sonic Infinity Fangame" loading="lazy" style="aspect-ratio: 200 / 200" width="200" height="200" />
-<div class="description-section">
-<h3>Safe and Free Downloads</h3>
-Our website offers a vast collection of fan-made Sonic games, ROM hacks, and mods available for free and secure download. You can enjoy these creations directly through our platform, ensuring a safe and enjoyable gaming experience.
 
+<div class="su-column su-column-1-4 menu-column">
+<a href="/adventures-2/mods/">
+<img class="aligncenter wp-image-1044" src="/wp-content/uploads/2024/09/ADVENTURE-2-Sonic-Fan-Game-Mods-386w.webp" srcset="/wp-content/uploads/2024/09/ADVENTURE-2-Sonic-Fan-Game-Mods-386w.webp 386w, /wp-content/uploads/2024/09/ADVENTURE-2-Sonic-Fan-Game-Mods-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="ADVENTURE 2 Sonic Fan Game Mods" loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+</a>
 </div>
-<div class="features-section">
-<div class="features-grid">
-<div class="feature-item"><strong>Extensive Library:</strong> A wide selection of fan-made content catering to various preferences and skill levels.</div>
-<div class="feature-item"><strong>Secure Downloads:</strong> All files are scanned and verified to ensure they are free from malware or viruses.</div>
-<div class="feature-item"><strong>User-Friendly Interface:</strong> Easily browse, search, and download your favorite fan games and mods.</div>
-</div>
-</div>
-<div class="description-section">
-<h4>Getting Started</h4>
-To embark on your journey into the world of Sonic fan creations, explore our curated categories, read user reviews, and check out our featured content. Whether you're seeking a nostalgic trip with a twist or a completely new Sonic adventure, our platform has something for every fan.
 
-</div>
-<div class="skills-section">
-<div class="skills-grid">
-<div class="skill-steps"></div>
-<div class="skill-steps"></div>
-<div class="skill-steps"></div>
+<div class="su-column su-column-1-4 menu-column">
+<a href="/the-hedgehog-forever/mods/">
+<img class="aligncenter wp-image-1317" src="/wp-content/uploads/2024/09/HEDGEHOG-FOREVER-386w.webp" srcset="/wp-content/uploads/2024/09/HEDGEHOG-FOREVER-386w.webp 386w, /wp-content/uploads/2024/09/HEDGEHOG-FOREVER-690w.webp 690w" sizes="(max-width: 768px) 345px, 386px" alt="HEDGEHOG FOREVER." loading="lazy" style="aspect-ratio: 386 / 217" width="386" height="217" />
+</a>
 </div>
 </div>
-<div class="description-section">Join our community of Sonic enthusiasts and discover the endless possibilities that fan creativity brings to the world of Sonic the Hedgehog!</div>`} />
+
+`} />
 </BaseLayout>
